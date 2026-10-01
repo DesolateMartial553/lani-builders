@@ -109,6 +109,35 @@
     .sticky-cta{display:flex;}
     footer{padding-bottom:100px;}
   }
+
+  /* Task A: content and quote journey. */
+  .hero__note{margin-top:18px; font-size:14px !important;}
+  .trust-strip h3{font-size:21px; margin-bottom:6px;}
+  .hero__note a{color:var(--accent);}
+  .process-list{list-style:none; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; counter-reset:job;}
+  .process-list li{counter-increment:job; border-top:1px solid var(--line); padding-top:20px;}
+  .process-list li::before{content:counter(job, decimal-leading-zero); display:block; color:var(--accent); font-family:'Space Grotesk',sans-serif; font-size:28px; margin-bottom:8px;}
+  .process-list h3{font-size:20px; margin-bottom:8px;}
+  .process-list p,.contact-note{color:var(--muted); font-size:14px;}
+  .band figure{min-width:0;}
+  .band figcaption{padding:12px 4px 0; color:var(--muted); font-size:14px;}
+  .quote-prep{max-width:900px; margin:0 auto 28px; display:grid; grid-template-columns:1fr 1fr; gap:28px;}
+  .quote-prep h3{margin-bottom:12px;}
+  .quote-checklist{padding-left:22px;}
+  .quote-checklist li{margin-bottom:10px; color:var(--muted);}
+  .quote-checklist strong{color:var(--ink);}
+  .contact-note{margin:14px 0;}
+  @media(max-width:820px){
+    .hero{padding-top:36px; padding-bottom:40px;}
+    .hero__media{order:0;}
+    .process-list{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .quote-prep{grid-template-columns:1fr;}
+  }
+  @media(max-width:480px){
+    .process-list{grid-template-columns:1fr;}
+    .sticky-cta{gap:8px; padding:12px;}
+    .sticky-cta .btn{padding:12px 10px; font-size:14px;}
+  }
 </style>
 </head>
 <body>
@@ -116,7 +145,9 @@
 <div class="topbar">
   <div class="wrap topbar__inner">
     <p>Free, no-obligation quotes across Northfield &amp; Birmingham</p>
-    <a href="tel:+441210000003">📞 0121 000 0003</a>
+    <!-- PLACEHOLDER: owner-confirmed phone number needed -->
+    <a href="tel:+441210000003">Call for a free quote</a>
+    <!-- /PLACEHOLDER -->
   </div>
 </div>
 
@@ -144,17 +175,19 @@
 <section class="hero" id="top">
   <div class="wrap hero__grid">
     <div>
-      <span class="hero__tag">🛠️ Trusted Local Builders</span>
-      <h1>Building work done<br><span>properly</span>, first time.</h1>
-      <p>Lani Builders handles extensions, renovations and general building work across Northfield and the wider Birmingham area — fully insured, no shortcuts.</p>
+      <span class="hero__tag">Lani Builders &middot; Northfield, Birmingham</span>
+      <h1>Make more of<br><span>your Northfield home.</span></h1>
+      <p>An extension for more room, or a renovation to make the space you have work harder. Talk your plans through with Lani Builders, based right here in Northfield.</p>
       <div class="hero__actions">
-        <a href="#contact" class="btn btn--accent">Request a Free Quote</a>
-        <a href="tel:+441210000003" class="btn btn--outline">📞 Call Us</a>
+        <a href="#contact" class="btn btn--accent">Get a free quote</a>
+        <!-- PLACEHOLDER: owner-confirmed phone number needed -->
+        <a href="tel:+441210000003" class="btn btn--outline">Call us</a>
+        <!-- /PLACEHOLDER -->
       </div>
+      <p class="hero__note">Have rough sizes, a few photos, your postcode and your ideal timescale to hand? <a href="#process">See how a job runs</a>.</p>
     </div>
     <div class="hero__media">
       <img src="https://images.pexels.com/photos/33257996/pexels-photo-33257996.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Modern renovated kitchen" loading="lazy" />
-      <div class="hero__badge">⭐ 4.8/5 on Google</div>
     </div>
   </div>
 </section>
@@ -162,37 +195,65 @@
 <section id="services">
   <div class="wrap">
     <div class="section__head reveal">
-      <h2>What We Do</h2>
-      <p>From small repairs to full extensions.</p>
+      <h2>Room to grow. Space to rethink.</h2>
+      <p>From a cracked lintel to a full extension.</p>
     </div>
     <div class="grid">
-      <div class="card reveal"><div class="icon">🏠</div><h3>Extensions</h3><p>Single or double-storey — Lani walks the plan through with you on-site, not off a generic template.</p></div>
+      <!-- PLACEHOLDER: confirm service list -->
+      <div class="card reveal"><div class="icon">🏠</div><h3>Extensions</h3><p>Single or double-storey &mdash; Lani walks the plan through with you on-site, not off a generic template.</p></div>
       <div class="card reveal"><div class="icon">🧱</div><h3>Renovations</h3><p>Kitchen and bathroom strip-outs scheduled around your routine, so you're not without one for longer than you have to be.</p></div>
-      <div class="card reveal"><div class="icon">🏗️</div><h3>General Building</h3><p>The unglamorous jobs — a cracked lintel, a dodgy wall — fixed properly instead of papered over.</p></div>
+      <div class="card reveal"><div class="icon">🏗️</div><h3>General Building</h3><p>The unglamorous jobs &mdash; a cracked lintel, a dodgy wall &mdash; fixed properly instead of papered over.</p></div>
       <div class="card reveal"><div class="icon">🪟</div><h3>Roofing &amp; Repairs</h3><p>We check the guttering while we're already up there, and flag anything else worth keeping an eye on.</p></div>
-      <div class="card reveal"><div class="icon">🏡</div><h3>Loft Conversions</h3><p>A dozen dead lofts turned into proper bedrooms and home offices across Northfield over the years.</p></div>
-      <div class="card reveal"><div class="icon">🚧</div><h3>Driveways &amp; Patios</h3><p>Block paving laid to actually drain — no puddle by the back door every time it rains.</p></div>
+      <div class="card reveal"><div class="icon">🏡</div><h3>Loft Conversions</h3><p>Dead space upstairs turned into a proper bedroom or home office, with the stairs and insulation planned in from the start.</p></div>
+      <div class="card reveal"><div class="icon">🚧</div><h3>Driveways &amp; Patios</h3><p>Block paving laid to actually drain &mdash; no puddle by the back door every time it rains.</p></div>
+      <!-- /PLACEHOLDER -->
     </div>
   </div>
 </section>
 
-<section class="strip">
+<section class="strip trust-strip" aria-label="Why choose Lani Builders">
   <div class="wrap grid">
-    <div class="reveal"><h3>12+</h3><p>Years in Business</p></div>
-    <div class="reveal"><h3>Fully</h3><p>Insured &amp; Reliable</p></div>
-    <div class="reveal"><h3>Free</h3><p>Written Quotes</p></div>
+    <!-- PLACEHOLDER: add real trade accreditations (e.g. FMB, TrustMark) here if held; free-quote tile used meanwhile -->
+    <div class="reveal"><h3>Free quotes</h3><p>No-obligation site visit</p></div>
+    <!-- /PLACEHOLDER -->
+    <!-- PLACEHOLDER: confirm insurance cover and evidence -->
+    <div class="reveal"><h3>Fully insured</h3><p>Public liability cover</p></div>
+    <!-- /PLACEHOLDER -->
+    <!-- PLACEHOLDER: confirm workmanship guarantee terms and duration -->
+    <div class="reveal"><h3>Guaranteed</h3><p>Workmanship guarantee</p></div>
+    <!-- /PLACEHOLDER -->
+    <!-- PLACEHOLDER: confirm years in business -->
+    <div class="reveal"><h3>12+</h3><p>Years in business</p></div>
+    <!-- /PLACEHOLDER -->
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <h2>How a job runs</h2>
+      <p>From the first look at your home to the final walk-through.</p>
+    </div>
+    <ol class="process-list">
+      <li><h3>Site visit</h3><p>Lani walks the space with you, looks at your ideas and any drawings, and talks through access, rough measurements and what needs to stay usable during the work.</p></li>
+      <li><h3>Written quote</h3><p>The scope, materials and costs set out in writing, including what is excluded and any decisions still to be made.</p></li>
+      <li><h3>Agree the schedule</h3><p>The order of work, access arrangements and any approvals needed are confirmed before a start date is agreed.</p></li>
+      <li><h3>The build</h3><p>Work moves through the agreed stages. Any change to scope or cost is discussed before extra work goes ahead.</p></li>
+      <li><h3>Snagging</h3><p>A walk-through of the finished work together, with any outstanding items listed and a plan to put them right.</p></li>
+      <li><h3>Sign-off &amp; handover</h3><p>Final check of the agreed work, relevant paperwork and care instructions handed over.</p></li>
+    </ol>
   </div>
 </section>
 
 <section id="projects" style="padding:0;">
   <div class="section__head reveal" style="padding:70px 24px 40px;">
-    <h2>Recent Work</h2>
-    <p>A sample of jobs completed locally.</p>
+    <h2>The kind of work we take on</h2>
+    <p>New walls going up, roofs getting fixed and homes growing outwards across Northfield and beyond.</p>
   </div>
   <div class="band reveal">
-    <img src="https://images.pexels.com/photos/4692281/pexels-photo-4692281.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Brick house under construction" loading="lazy" />
-    <img src="https://images.pexels.com/photos/32751450/pexels-photo-32751450.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Builder laying concrete block wall" loading="lazy" />
-    <img src="https://images.pexels.com/photos/38749917/pexels-photo-38749917.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Roofer working on a roof" loading="lazy" />
+    <figure><img src="https://images.pexels.com/photos/4692281/pexels-photo-4692281.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Brick house under construction" loading="lazy" /><figcaption>Extensions &amp; new build</figcaption></figure>
+    <figure><img src="https://images.pexels.com/photos/32751450/pexels-photo-32751450.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Builder laying concrete block wall" loading="lazy" /><figcaption>Blockwork &amp; structural work</figcaption></figure>
+    <figure><img src="https://images.pexels.com/photos/38749917/pexels-photo-38749917.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Roofer working on a roof" loading="lazy" /><figcaption>Roofing &amp; repairs</figcaption></figure>
   </div>
 </section>
 
@@ -201,8 +262,10 @@
     <div class="owner reveal">
       <img src="https://images.pexels.com/photos/6720533/pexels-photo-6720533.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Builder on site" loading="lazy" />
       <div>
-        <blockquote>"I've worked on homes across Northfield for over a decade. I still turn up to every job myself — you get the same standard whether it's a new socket or a full extension."</blockquote>
-        <div class="who">— Lani, Founder</div>
+        <!-- PLACEHOLDER: replace with the owner's approved quote and name -->
+        <blockquote>"I've worked on homes across Northfield for over a decade. I still turn up to every job myself &mdash; you get the same standard whether it's a cracked lintel or a full extension."</blockquote>
+        <div class="who">&mdash; Lani, Founder</div>
+        <!-- /PLACEHOLDER -->
       </div>
     </div>
   </div>
@@ -211,18 +274,22 @@
 <section id="reviews" class="reviews">
   <div class="wrap">
     <div class="section__head reveal">
-      <span class="rating-badge">⭐ 4.8 · Google Reviews</span>
-      <h2>What clients say</h2>
-      <p>Feedback from recent jobs around Northfield.</p>
+      <h2>What locals say</h2>
+      <p>Feedback from jobs around Northfield.</p>
     </div>
     <div class="review-grid">
-      <div class="review reveal"><div class="stars">★★★★★</div><p>"Turned up on time every day, kept the place tidy and the extension looks brilliant."</p><div class="who"><span class="avatar">H</span> Local Homeowner</div></div>
-      <div class="review reveal"><div class="stars">★★★★★</div><p>"Quote was fair and there were no surprise costs at the end. Would use again."</p><div class="who"><span class="avatar">G</span> Local Homeowner</div></div>
-      <div class="review reveal"><div class="stars">★★★★☆</div><p>"Good communication throughout the loft conversion, finished close to schedule."</p><div class="who"><span class="avatar">W</span> Local Homeowner</div></div>
+      <!-- PLACEHOLDER: replace with real Google reviews -->
+      <div class="review reveal"><div class="stars">★★★★★</div><p>"Turned up on time every day, kept the place tidy and the extension looks brilliant."</p><div class="who"><span class="avatar">H</span> Helen &middot; Local regular</div></div>
+      <!-- /PLACEHOLDER -->
+      <!-- PLACEHOLDER: replace with real Google reviews -->
+      <div class="review reveal"><div class="stars">★★★★★</div><p>"Quote was fair and there were no surprise costs at the end. Would use again."</p><div class="who"><span class="avatar">G</span> Gary &middot; Local regular</div></div>
+      <!-- /PLACEHOLDER -->
+      <!-- PLACEHOLDER: replace with real Google reviews -->
+      <div class="review reveal"><div class="stars">★★★★☆</div><p>"Good communication throughout the loft conversion, finished close to schedule."</p><div class="who"><span class="avatar">W</span> Wendy &middot; Local regular</div></div>
+      <!-- /PLACEHOLDER -->
     </div>
-    <div style="text-align:center; margin-top:36px;">
-      <a class="btn btn--outline" href="https://www.google.com/search?q=Lani+Builders+Northfield+Birmingham+reviews" target="_blank" rel="noopener">See all reviews on Google →</a>
-    </div>
+    <!-- PLACEHOLDER: add owner-confirmed direct Google Business Profile review link here once known -->
+    <!-- /PLACEHOLDER -->
   </div>
 </section>
 
@@ -233,9 +300,11 @@
       <p>What clients usually want to know before starting a job.</p>
     </div>
     <div class="faq reveal">
-      <details><summary>How quickly can I get a quote?</summary><p>Usually within 48 hours of an initial site visit or call.</p></details>
-      <details><summary>Are you insured?</summary><p>Yes, we're fully insured for all work we carry out.</p></details>
-      <details><summary>Do I need planning permission for an extension?</summary><p>It depends on the size and scope — we'll advise during your quote and can point you toward the right process.</p></details>
+      <details><summary>What should I have ready for a quote?</summary><p>Rough sizes, photos, your postcode and a preferred timescale are a useful start. Include drawings if you already have them, and mention any access restrictions.</p></details>
+      <details><summary>How quickly can I get a quote?</summary><p><!-- PLACEHOLDER: confirm quote turnaround -->Usually within 48 hours of an initial site visit or call.<!-- /PLACEHOLDER --></p></details>
+      <details><summary>Are you insured?</summary><p><!-- PLACEHOLDER: confirm insurance details -->Yes, we're fully insured for all work we carry out, and we're happy to show you the paperwork.<!-- /PLACEHOLDER --></p></details>
+      <details><summary>Do I need planning permission for an extension?</summary><p>It depends on the size and scope &mdash; we'll advise during your quote and can point you toward the right process.</p></details>
+      <details><summary>Can I stay at home during the work?</summary><p>Usually, yes. Tell us at the site visit which rooms you need to use, and we'll plan around dust, access and keeping the kitchen working where we can.</p></details>
       <details><summary>Do you clean up after the job?</summary><p>Yes, we keep sites tidy throughout and leave the property clean on completion.</p></details>
     </div>
   </div>
@@ -244,28 +313,62 @@
 <section class="cta-band">
   <div class="wrap reveal">
     <h2>Got a project in mind?</h2>
-    <p>Get a free, no-obligation quote — usually back to you within 48 hours.</p>
-    <a href="tel:+441210000003" class="btn btn--accent">📞 Call For a Quote</a>
+    <p><!-- PLACEHOLDER: confirm quote turnaround -->Get a free, no-obligation quote &mdash; usually back to you within 48 hours.<!-- /PLACEHOLDER --></p>
+    <!-- PLACEHOLDER: owner-confirmed phone number needed -->
+    <a href="tel:+441210000003" class="btn btn--accent">Call for a quote</a>
+    <!-- /PLACEHOLDER -->
   </div>
 </section>
 
 <section id="contact">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>Get a free quote</h2>
+      <p>Tell Lani Builders about your extension or renovation in Northfield.</p>
+    </div>
+    <div class="quote-prep">
+      <div class="card">
+        <h3>What to send us</h3>
+        <ul class="quote-checklist">
+          <li><strong>Rough sizes:</strong> approximate room or extension dimensions.</li>
+          <li><strong>Photos:</strong> the space, the outside of the house and access.</li>
+          <li><strong>Postcode:</strong> so we know where the job is.</li>
+          <li><strong>Timescale:</strong> when you would like work to start and any deadlines.</li>
+        </ul>
+        <p class="contact-note">Already have drawings? Keep those with your notes too.</p>
+      </div>
+      <div class="card">
+        <h3>Talk through your project</h3>
+        <p>Give Lani a ring, describe the job and arrange a time for a site visit.</p>
+        <!-- PLACEHOLDER: owner-confirmed phone number needed (also add email/WhatsApp for photos) -->
+        <a href="tel:+441210000003" class="btn btn--accent">Call for a free quote</a>
+        <!-- /PLACEHOLDER -->
+      </div>
+    </div>
+  </div>
   <div class="wrap map-contact reveal">
     <iframe src="https://maps.google.com/maps?q=Northfield,+Birmingham&z=15&output=embed" loading="lazy" title="Map showing Lani Builders' coverage area"></iframe>
     <div class="grid" style="grid-template-columns:1fr;">
+      <!-- PLACEHOLDER: real opening hours needed -->
       <div class="card" style="text-align:center;"><h3>🕒 Available</h3><p>Mon–Fri: 8am – 6pm<br>Sat: 9am – 1pm</p></div>
-      <div class="card" style="text-align:center;"><h3>📍 Covering</h3><p>Northfield &amp; Greater<br>Birmingham</p></div>
+      <!-- /PLACEHOLDER -->
+      <!-- PLACEHOLDER: confirm service area; street address and postcode needed -->
+      <div class="card" style="text-align:center;"><h3>📍 Covering</h3><p>Northfield, Longbridge, Bournville, Kings Norton and nearby</p>
+        <p class="contact-note"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Northfield%2C+Birmingham" target="_blank" rel="noopener">Directions to Northfield &rarr;</a></p>
+      </div>
+      <!-- /PLACEHOLDER -->
     </div>
   </div>
 </section>
 
 <footer>
   <p>&copy; 2026 Lani Builders, Northfield, Birmingham.</p>
-  <p style="margin-top:6px;">Site by <a href="#">your name here</a></p>
 </footer>
 
 <div class="sticky-cta">
-  <a href="tel:+441210000003" class="btn btn--accent">📞 Call For a Quote</a>
+  <!-- PLACEHOLDER: owner-confirmed phone number needed -->
+  <a href="tel:+441210000003" class="btn btn--accent">Call for a quote</a>
+  <!-- /PLACEHOLDER -->
   <a href="#contact" class="btn btn--outline">Get in Touch</a>
 </div>
 
