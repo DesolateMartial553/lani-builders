@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-FzyG9isp+q4SrPxXe/4ybUbNLZ27CVuKX/UFx+SEVKM=' 'sha256-LslJjAwTLYe/gbFs+NTEhPzV19wC+UL5Pisopprvc70='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-src https://maps.google.com https://www.google.com; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-gAIMlo4uHwea7LDSu/hGhLXHg8Iu/WQoVQvXGVLwabA=' 'sha256-FzyG9isp+q4SrPxXe/4ybUbNLZ27CVuKX/UFx+SEVKM=' 'sha256-LslJjAwTLYe/gbFs+NTEhPzV19wC+UL5Pisopprvc70='; style-src 'self' 'sha256-J+wZC0oIVWI6okAWRE6cnXAkKgJMO313+pNEwsAEKNA=' 'sha256-oxm1PZwb1aAtIaqjEfA6SihFj69blDSeJJ7Gr+XiTCc='; img-src 'self' data:; font-src 'self'; frame-src https://maps.google.com https://www.google.com; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
+<script>if (window.top !== window.self) { try { window.top.location.replace(window.self.location.href); } catch (e) { document.documentElement.hidden = true; } }</script>
 <title>Lani Builders | Builders in Northfield, Birmingham</title>
 <meta name="description" content="Lani Builders: local builders in Northfield, Birmingham for extensions, renovations and general building work. Free, no-obligation quotes." />
 <link rel="canonical" href="https://desolatemartial553.github.io/lani-builders/" />
@@ -217,6 +218,11 @@
     .btn:hover,.card:hover,.review:hover{transform:none;}
   }
   footer a[href="privacy.html"]{text-decoration:underline; text-underline-offset:3px;}
+  /* Former inline style attributes (moved here for a stricter CSP) */
+  .u-s1{padding:0 !important;}
+  .u-s2{padding:70px 24px 40px !important;}
+  .u-s3{grid-template-columns:1fr !important;}
+  .u-s4{text-align:center !important;}
 </style>
 </head>
 <body>
@@ -329,8 +335,8 @@
   </div>
 </section>
 
-<section id="projects" style="padding:0;">
-  <div class="section__head reveal" style="padding:70px 24px 40px;">
+<section class="u-s1" id="projects">
+  <div class="section__head reveal u-s2">
     <h2>The kind of work we take on</h2>
     <p>New walls going up, roofs getting fixed and homes growing outwards across Northfield and beyond.</p>
   </div>
@@ -439,12 +445,12 @@
         <a href="https://www.google.com/maps/search/?api=1&amp;query=Lani+Builders+Northfield+Birmingham" target="_blank" rel="noopener">Get directions &rarr;</a>
       </div>
     </div>
-    <div class="grid" style="grid-template-columns:1fr;">
+    <div class="grid u-s3">
       <!-- PLACEHOLDER: real opening hours needed -->
-      <div class="card" style="text-align:center;"><h3>🕒 Available</h3><p>Mon–Fri: 8am – 6pm<br>Sat: 9am – 1pm</p></div>
+      <div class="card u-s4"><h3>🕒 Available</h3><p>Mon–Fri: 8am – 6pm<br>Sat: 9am – 1pm</p></div>
       <!-- /PLACEHOLDER -->
       <!-- PLACEHOLDER: confirm service area; street address and postcode needed -->
-      <div class="card" style="text-align:center;"><h3>📍 Covering</h3><p>Northfield, Longbridge, Bournville, Kings Norton and nearby</p>
+      <div class="card u-s4"><h3>📍 Covering</h3><p>Northfield, Longbridge, Bournville, Kings Norton and nearby</p>
         <p class="contact-note"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Northfield%2C+Birmingham" target="_blank" rel="noopener">Directions to Northfield &rarr;</a></p>
       </div>
       <!-- /PLACEHOLDER -->
