@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-gAIMlo4uHwea7LDSu/hGhLXHg8Iu/WQoVQvXGVLwabA=' 'sha256-FzyG9isp+q4SrPxXe/4ybUbNLZ27CVuKX/UFx+SEVKM=' 'sha256-LslJjAwTLYe/gbFs+NTEhPzV19wC+UL5Pisopprvc70='; style-src 'self' 'sha256-J+wZC0oIVWI6okAWRE6cnXAkKgJMO313+pNEwsAEKNA=' 'sha256-oxm1PZwb1aAtIaqjEfA6SihFj69blDSeJJ7Gr+XiTCc='; img-src 'self' data:; font-src 'self'; frame-src https://maps.google.com https://www.google.com; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-gAIMlo4uHwea7LDSu/hGhLXHg8Iu/WQoVQvXGVLwabA=' 'sha256-+jULJ8KeNwXJzPVvThwqqIGYkk8NwjUAeAfFrOoHn9g=' 'sha256-LslJjAwTLYe/gbFs+NTEhPzV19wC+UL5Pisopprvc70='; style-src 'self' 'sha256-Zh2z+Bbz3ORdY80h4hKg3CgWqYRyA8a0hA5WQsEZwbc='; img-src 'self' data:; font-src 'self'; frame-src https://maps.google.com https://www.google.com; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <script>if (window.top !== window.self) { try { window.top.location.replace(window.self.location.href); } catch (e) { document.documentElement.hidden = true; } }</script>
 <title>Lani Builders | Builders in Northfield, Birmingham</title>
 <meta name="description" content="Lani Builders: local builders in Northfield, Birmingham for extensions, renovations and general building work. Free, no-obligation quotes." />
 <link rel="canonical" href="https://desolatemartial553.github.io/lani-builders/" />
 <meta name="robots" content="index, follow" />
-<meta name="theme-color" content="#0f1720" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f1720'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23f2994a'%3EL%3C/text%3E%3C/svg%3E" />
+<meta name="theme-color" content="#0E2A47" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230E2A47'/%3E%3Ctext x='32' y='45' font-family='Arial,sans-serif' font-size='38' font-weight='700' text-anchor='middle' fill='%23F3F6FA'%3EL%3C/text%3E%3C/svg%3E" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Lani Builders" />
 <meta property="og:locale" content="en_GB" />
@@ -62,167 +62,383 @@
   ]
 }
 </script>
-<link rel="preload" as="image" media="(max-width:820px)" imagesrcset="images/33257996-w640-h400-6f8d70.webp 640w, images/33257996-w1000-h625-fda3b8.webp 1000w, images/33257996-w1300-h813-447e64.webp 1300w" imagesizes="100vw" fetchpriority="high" />
-<link rel="preload" as="image" media="(min-width:821px)" imagesrcset="images/33257996-w520-h650-ff5d79.webp 520w, images/33257996-w800-h1000-84f76f.webp 800w, images/33257996-w1040-h1300-7c1085.webp 1040w" imagesizes="(min-width:1200px) 540px, 48vw" fetchpriority="high" />
+<link rel="preload" as="image" imagesrcset="images/33257996-w640-h400-6f8d70.webp 640w, images/33257996-w1000-h625-fda3b8.webp 1000w, images/33257996-w1300-h813-447e64.webp 1300w" imagesizes="(min-width:1320px) 760px, (min-width:821px) 56vw, 100vw" fetchpriority="high" />
 <link rel="stylesheet" href="fonts/fonts.css" />
 <style>
+  @property --p{syntax:'<number>'; inherits:true; initial-value:1;}
   :root{
-    --bg:#0f1720; --ink:#eef3f8; --muted:#a9b8c4;
-    --accent:#f2994a; --accent2:#2d9cdb; --card:#182430; --line:#25333f;
+    --navy:#0E2A47; --navy-2:#0A2038; --navy-3:#15375C; --paper:#F3F6FA;
+    --chalk:rgba(243,246,250,.18); --grid:rgba(243,246,250,.055);
+    --dim:rgba(243,246,250,.76); --cta:#FF7A1A; --cta-h:#FF8F3D;
+    --pdim:rgba(14,42,71,.76); --pline:rgba(14,42,71,.22);
+    --display:'Archivo','Arial Black',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+    --header-h:64px;
+    --stage-h:clamp(560px,calc(100svh - var(--header-h)),880px);
+    --run:clamp(520px,130vh,1200px);
+    --ease:cubic-bezier(.2,.7,.2,1);
   }
   *{box-sizing:border-box; margin:0; padding:0;}
-  body{font-family:'Archivo',sans-serif; background:var(--bg); color:var(--ink); line-height:1.6;}
-  h1,h2,h3{font-family:'Archivo',sans-serif;}
-  .wrap{max-width:1140px; margin:0 auto; padding:0 24px;}
+  html{scroll-padding-top:var(--header-h); -webkit-text-size-adjust:100%;}
+  [id]{scroll-margin-top:var(--header-h);}
+  body{font-family:var(--display); font-weight:400; background-color:var(--navy); color:var(--paper); line-height:1.6; overflow-x:hidden;
+    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+    background-size:24px 24px;}
   a{color:inherit;}
-  html{scroll-padding-top:var(--header-h,72px);}
-  [id]{scroll-margin-top:var(--header-h,72px);}
+  img,svg{display:block; max-width:100%;}
   main:focus,section:focus{outline:none;}
-  :focus-visible{outline:3px solid #fff; outline-offset:3px; border-radius:4px;}
-  .skip-link{position:absolute; left:16px; top:-100px; z-index:100; background:#fff; color:#0f1720; font-weight:700; padding:12px 18px; border-radius:8px; text-decoration:none;}
+  :focus-visible{outline:3px solid #fff; outline-offset:3px;}
+  .paper :focus-visible,.cmp:focus-within{outline-color:var(--navy);}
+  .skip-link{position:absolute; left:16px; top:-100px; z-index:100; background:#fff; color:var(--navy); font-weight:700; padding:12px 18px; text-decoration:none;}
   .skip-link:focus{top:12px;}
-  img{display:block; max-width:100%;}
-  .js .reveal{opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease;}
-  .js .reveal.in{opacity:1; transform:none;}
-  .topbar{background:#0a1119; color:#fff; font-size:14px;}
-  .topbar__inner{display:flex; justify-content:space-between; align-items:center; padding:0 24px; flex-wrap:wrap; gap:8px;}
-  .topbar a{color:var(--accent); font-weight:700; text-decoration:none; display:inline-block; padding:10px 0;}
-  header{position:sticky; top:0; background:rgba(15,23,32,.95); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); z-index:30; transition:box-shadow .3s;}
-  header.scrolled{box-shadow:0 8px 24px rgba(0,0,0,.4);}
-  .header__inner{display:flex; align-items:center; justify-content:space-between; padding:16px 24px; position:relative;}
-  .brand{font-size:23px; font-weight:700; text-decoration:none; display:inline-block; padding:4px 0;}
-  .brand span{color:var(--accent);}
-  nav ul{list-style:none; display:flex; gap:28px;}
-  nav a{text-decoration:none; font-weight:600; font-size:15px; color:var(--muted); display:inline-block; padding:10px 0;}
-  .burger{display:none; flex-direction:column; justify-content:center; align-items:center; gap:4px; background:none; border:0; cursor:pointer; width:44px; height:44px; padding:0;}
-  .burger span{width:24px; height:2px; background:#fff;}
-  .mobile-menu{display:none; position:absolute; top:100%; left:0; right:0; background:var(--card); border-bottom:1px solid var(--line); flex-direction:column; padding:12px 24px;}
+  .wrap{max-width:1240px; margin:0 auto; padding:0 24px;}
+  .mono{font-family:var(--mono);}
+  /* reveals: progressive enhancement, hidden only once JS has added .js */
+  .js .rv{opacity:0; transform:translateY(26px); transition:opacity .7s var(--ease), transform .7s var(--ease);}
+  .js .rv.in{opacity:1; transform:none;}
+  .js .rv-l{opacity:0; transform:translateX(-48px); transition:opacity .8s var(--ease), transform .8s var(--ease);}
+  .js .rv-l.in{opacity:1; transform:none;}
+  .js .rv-r{opacity:0; transform:translateX(48px); transition:opacity .8s var(--ease), transform .8s var(--ease);}
+  .js .rv-r.in{opacity:1; transform:none;}
+
+  /* top strip + header */
+  .topbar{background:var(--navy-2); border-bottom:1px solid var(--chalk); font:400 12px/1.4 var(--mono); letter-spacing:.04em; color:var(--dim);}
+  .topbar__inner{display:flex; justify-content:space-between; align-items:center; gap:8px 24px; flex-wrap:wrap; padding-top:2px; padding-bottom:2px;}
+  .topbar a{color:var(--paper); font-weight:600; text-decoration:underline; text-underline-offset:3px; display:inline-block; padding:10px 0;}
+  header{position:sticky; top:0; z-index:30; background:rgba(14,42,71,.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--chalk); transition:box-shadow .3s;}
+  header.scrolled{box-shadow:0 10px 30px rgba(5,15,28,.5);}
+  .header__inner{display:flex; align-items:center; justify-content:space-between; gap:20px; padding-top:10px; padding-bottom:10px; position:relative;}
+  .brand{display:inline-flex; align-items:center; gap:10px; font-weight:800; font-size:21px; letter-spacing:-.01em; text-decoration:none; padding:4px 0;}
+  .brand svg{width:30px; height:30px; flex:none;}
+  .brand em{font-style:normal; font-family:var(--mono); font-weight:400; font-size:12px; color:var(--dim); letter-spacing:.06em; margin-left:2px;}
+  nav ul{list-style:none; display:flex; gap:30px;}
+  nav a{font:600 13px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; text-decoration:none; color:var(--dim); display:inline-block; padding:14px 0; position:relative;}
+  nav a::after{content:""; position:absolute; left:0; right:0; bottom:8px; height:1px; background:var(--paper); transform:scaleX(0); transform-origin:left; transition:transform .25s var(--ease);}
+  nav a:hover,nav a:focus-visible{color:#fff;}
+  nav a:hover::after,nav a:focus-visible::after{transform:scaleX(1);}
+  .header__cta{margin-left:auto;}
+  .burger{display:none; flex-direction:column; justify-content:center; align-items:center; gap:5px; background:none; border:1px solid var(--chalk); cursor:pointer; width:44px; height:44px; padding:0;}
+  .burger span{width:22px; height:2px; background:#fff; transition:transform .25s var(--ease), opacity .2s;}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .mobile-menu{display:none; position:absolute; top:100%; left:0; right:0; background:var(--navy-2); border-bottom:1px solid var(--chalk); flex-direction:column; padding:8px 24px 16px;}
   .mobile-menu.open{display:flex;}
-  .mobile-menu a{padding:12px 0; text-decoration:none; font-weight:600; border-bottom:1px solid var(--line); color:var(--ink);}
-  .btn{display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:12px 26px; border-radius:8px; font-weight:700; text-decoration:none; font-size:15px; border:none; cursor:pointer; transition:transform .2s, background .2s;}
-  .btn:hover{transform:translateY(-2px);}
-  .btn--accent{background:var(--accent); color:#0f1720;}
-  .btn--accent:hover{background:#d98337;}
-  .btn--outline{border:2px solid #6b7f90; color:var(--ink);}
-  .hero{padding:70px 24px;}
-  .hero__grid{display:grid; grid-template-columns:1.05fr 1fr; gap:48px; align-items:center;}
-  .hero__tag{display:inline-block; background:#1e2c3a; color:var(--accent2); font-weight:700; font-size:13px; padding:6px 16px; border-radius:999px; margin-bottom:20px; border:1px solid #274054;}
-  .hero h1{font-size:clamp(34px,4.6vw,54px); line-height:1.1; margin-bottom:18px;}
-  .hero h1 span{color:var(--accent);}
-  .hero p{max-width:520px; margin-bottom:30px; color:var(--muted); font-size:18px;}
-  .hero__actions{display:flex; gap:16px; flex-wrap:wrap;}
-  .hero__media{position:relative; border-radius:20px; overflow:hidden; aspect-ratio:4/5; box-shadow:0 30px 60px -20px rgba(0,0,0,.5);}
-  .hero__media img{width:100%; height:100%; object-fit:cover;}
-  .hero__badge{position:absolute; top:18px; right:18px; background:rgba(15,23,32,.85); border:1px solid var(--line); padding:12px 18px; border-radius:14px; font-size:14px; font-weight:700;}
-  section{padding:70px 24px;}
-  .section__head{text-align:center; max-width:640px; margin:0 auto 44px;}
-  .section__head h2{font-size:clamp(26px,4vw,38px); margin-bottom:12px;}
-  .section__head p{color:var(--muted);}
-  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px;}
-  .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:28px; transition:transform .25s, box-shadow .25s;}
-  .card:hover{transform:translateY(-6px); box-shadow:0 20px 40px -16px rgba(0,0,0,.4);}
-  .card .icon{font-size:30px; margin-bottom:14px;}
-  .card h3{font-size:19px; margin-bottom:8px;}
-  .card p{color:var(--muted); font-size:15px;}
-  .strip{background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
-  .strip .grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); text-align:center;}
-  .strip .stat{font-size:30px; line-height:1.3; font-weight:700; color:var(--accent); font-family:'Archivo',sans-serif;}
-  .strip p{color:var(--muted); font-size:14px;}
-  .band{display:grid; grid-template-columns:repeat(3,1fr); gap:4px;}
-  .band img{width:100%; height:280px; object-fit:cover; transition:transform .4s;}
-  .owner{display:grid; grid-template-columns:220px 1fr; gap:36px; align-items:center; background:var(--bg); border:1px solid var(--line); border-radius:20px; padding:36px; max-width:760px; margin:0 auto;}
-  .owner img{border-radius:14px; aspect-ratio:1; object-fit:cover; width:100%;}
-  .owner blockquote{font-size:19px; line-height:1.5; margin-bottom:14px;}
-  .owner .who{color:var(--accent); font-weight:700; font-size:14px;}
-  .reviews{background:var(--card);}
-  .review-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px;}
-  .review{background:var(--bg); border:1px solid var(--line); border-radius:14px; padding:24px; transition:transform .25s;}
-  .review:hover{transform:translateY(-4px);}
-  .stars{color:var(--accent); letter-spacing:2px; margin-bottom:10px;}
-  .review p{font-size:15px; margin-bottom:14px;}
-  .review .who{display:flex; align-items:center; gap:10px; font-weight:700; font-size:14px; color:var(--muted);}
-  .avatar{width:32px; height:32px; border-radius:50%; background:var(--accent); color:#0f1720; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700;}
-  .rating-badge{display:inline-flex; align-items:center; gap:10px; background:var(--bg); border:1px solid var(--line); border-radius:999px; padding:10px 20px; font-weight:700; margin-bottom:20px;}
-  .faq{max-width:760px; margin:0 auto;}
-  .faq details{background:var(--card); border:1px solid var(--line); border-radius:14px; margin-bottom:14px;}
-  .faq summary{cursor:pointer; font-weight:700; font-family:'Archivo',sans-serif; list-style:none; min-height:44px; padding:14px 22px;}
-  .faq summary:focus-visible{outline-offset:-3px;}
+  .mobile-menu a{padding:14px 0; text-decoration:none; font:600 15px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; border-bottom:1px solid var(--chalk);}
+
+  /* the single CTA colour */
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:48px; padding:13px 26px; font:800 15px/1 var(--display); letter-spacing:.01em; text-decoration:none; border:2px solid transparent; background:transparent; color:inherit; cursor:pointer; transition:transform .18s var(--ease), background .18s, box-shadow .18s;}
+  .btn--cta{background:var(--cta); color:var(--navy); box-shadow:4px 4px 0 rgba(243,246,250,.9);}
+  .btn--cta:hover{background:var(--cta-h);}
+  .btn--cta:active{transform:translate(3px,3px); box-shadow:1px 1px 0 rgba(243,246,250,.9);}
+  .btn--cta svg{width:18px; height:18px; transition:transform .2s var(--ease);}
+  .btn--cta:hover svg{transform:translateX(4px);}
+  .btn--sm{min-height:44px; padding:10px 18px; font-size:14px; box-shadow:3px 3px 0 rgba(243,246,250,.9);}
+  .btn--line{border-color:var(--paper); color:var(--paper);}
+  .btn--line:hover{background:rgba(243,246,250,.1);}
+  .paper .btn--cta{box-shadow:4px 4px 0 var(--navy);}
+
+  /* hero: scroll transformation, photo -> floor plan */
+  .hero{position:relative;}
+  .hero__stage{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); grid-template-areas:"strip sheet" "h1 sheet" "lede sheet" "cta sheet" "note sheet"; grid-template-rows:repeat(5,auto); align-content:center; column-gap:clamp(28px,4vw,64px); max-width:1240px; margin:0 auto; padding:24px; min-height:var(--stage-h); overflow:hidden;}
+  .hero__strip{grid-area:strip; font:400 12px/1.4 var(--mono); letter-spacing:.1em; text-transform:uppercase; color:var(--dim); display:flex; align-items:center; gap:12px; margin-bottom:22px;}
+  .hero__strip::before{content:""; width:40px; height:1px; background:var(--paper); flex:none;}
+  .hero h1{grid-area:h1; font-weight:800; font-size:clamp(42px,4.5vw,72px); line-height:.98; letter-spacing:-.035em; margin-bottom:26px;}
+  .hero h1 .bt{display:block;}
+  .hero h1 .mm{position:relative; display:inline-block; padding-bottom:.12em;}
+  .hero h1 .mm::after{content:""; position:absolute; left:0; right:0; bottom:0; height:10px; border-left:1px solid var(--paper); border-right:1px solid var(--paper); background:linear-gradient(var(--paper),var(--paper)) center/100% 1px no-repeat; transform-origin:left; animation:ext 1.1s .5s var(--ease) both;}
+  @keyframes ext{from{transform:scaleX(0);}}
+  .hero__lede{grid-area:lede; max-width:470px; color:var(--dim); font-size:clamp(16px,1.35vw,19px); margin-bottom:30px;}
+  .hero__cta{grid-area:cta;}
+  .hero__note{grid-area:note; margin-top:20px; font:400 13px/1.6 var(--mono); color:var(--dim); max-width:430px;}
+  .hero__note a{color:var(--paper); text-underline-offset:3px;}
+  .sheet-fig{grid-area:sheet; grid-row:1 / -1; align-self:center; justify-self:end; width:100%; max-width:calc((var(--stage-h) - 110px)*1.6); position:relative; container-type:inline-size;}
+  .hero__sheet{position:relative; aspect-ratio:8/5; width:100%; border:1px solid var(--paper); background:var(--navy-2); overflow:hidden; --p:1;}
+  .hero__sheet::before,.hero__sheet::after{content:""; position:absolute; width:18px; height:18px; z-index:4; pointer-events:none;}
+  .hero__sheet::before{left:8px; top:8px; border-left:2px solid var(--paper); border-top:2px solid var(--paper);}
+  .hero__sheet::after{right:8px; bottom:8px; border-right:2px solid var(--paper); border-bottom:2px solid var(--paper);}
+  .hero__photo{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:calc(1 - clamp(0,(var(--p) - .08)/.62,1)*.9); filter:grayscale(calc(clamp(0,var(--p)/.7,1)*.9)) contrast(1.05);}
+  .hero__tint{position:absolute; inset:0; background:var(--navy); opacity:calc(clamp(0,(var(--p) - .05)/.55,1)*.82);}
+  .hero__grid24{position:absolute; inset:0; background-image:linear-gradient(var(--chalk) 1px,transparent 1px),linear-gradient(90deg,var(--chalk) 1px,transparent 1px); background-size:24px 24px; opacity:calc(clamp(0,(var(--p) - .1)/.4,1)); mask-image:radial-gradient(ellipse at center,#000 40%,transparent 95%); -webkit-mask-image:radial-gradient(ellipse at center,#000 40%,transparent 95%);}
+  .plan{position:absolute; inset:0; width:100%; height:100%; z-index:2; color:var(--paper);}
+  .plan *{fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:butt; stroke-linejoin:miter;}
+  .plan .thin{stroke-width:1;}
+  .plan text{fill:currentColor; stroke:none; font:500 15px var(--mono); letter-spacing:.02em;}
+  .plan .hd{stroke-dasharray:1 1; stroke-dashoffset:calc(1 - clamp(0,(var(--p) - var(--s))/var(--d),1));}
+  .plan .t1{--s:.04; --d:.22;} .plan .t2{--s:.10; --d:.22;} .plan .t3{--s:.28; --d:.12;} .plan .t4{--s:.32; --d:.14;}
+  .plan .t5{--s:.38; --d:.2;} .plan .t6{--s:.48; --d:.14;} .plan .t7{--s:.54; --d:.18;} .plan .t8{--s:.68; --d:.2;}
+  .plan .dt{opacity:clamp(0,(var(--p) - .72)*6,1);}
+  .plan--static .hd{stroke-dasharray:none; stroke-dashoffset:0;}
+  .plan.plan--static .dt{opacity:1;}
+  .xh{position:absolute; z-index:3; pointer-events:none; opacity:0; transition:opacity .2s; background:rgba(243,246,250,.55);}
+  .xh--x{left:0; right:0; top:0; height:1px; transform:translateY(var(--my,0px));}
+  .xh--y{top:0; bottom:0; left:0; width:1px; transform:translateX(var(--mx,0px));}
+  .xh-read{position:absolute; z-index:3; left:0; top:0; transform:translate(calc(var(--mx,0px) + 10px),calc(var(--my,0px) + 10px)); font:500 11px/1 var(--mono); color:var(--paper); background:var(--navy-2); border:1px solid var(--chalk); padding:4px 6px; opacity:0; pointer-events:none; transition:opacity .2s; white-space:nowrap;}
+  .hero__sheet.is-aim .xh,.hero__sheet.is-aim .xh-read{opacity:1;}
+  .sheet-fig figcaption{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:12px; font:400 12px/1.4 var(--mono); letter-spacing:.06em; text-transform:uppercase; color:var(--dim);}
+  .readout{display:flex; align-items:center; gap:14px; flex:1; min-width:0;}
+  .readout i{flex:1; height:1px; background:var(--chalk); position:relative; min-width:30px;}
+  .readout i::after{content:""; position:absolute; left:0; top:-3px; height:7px; width:100%; background:linear-gradient(var(--paper),var(--paper)) left/calc(var(--p)*100%) 1px no-repeat; transform-origin:left;}
+  .readout b{font-weight:500; opacity:.45; transition:opacity .3s;}
+  .readout b.on{opacity:1;}
+  .scrollhint{display:none; align-items:center; gap:8px;}
+  /* pinned only with JS, on desktop, with motion allowed */
+  @media (min-width:821px) and (max-height:1100px) and (prefers-reduced-motion:no-preference){
+    .js .hero{height:calc(var(--stage-h) + var(--run));}
+    .js .hero__stage{position:sticky; top:var(--header-h); height:var(--stage-h); min-height:0;}
+    .js .scrollhint{display:inline-flex;}
+    .js .scrollhint svg{animation:nudge 1.6s ease-in-out infinite;}
+  }
+  @keyframes nudge{50%{transform:translateY(4px);}}
+  /* time-based draw where there is no scroll pin (mobile) */
+  @media (max-width:820px) and (prefers-reduced-motion:no-preference){
+    .js .hero__sheet{animation:drawp 3.4s .5s cubic-bezier(.45,.05,.3,1) both;}
+  }
+  @keyframes drawp{from{--p:0;} to{--p:.9;}}
+
+  /* shared section scaffolding */
+  section{padding:clamp(64px,9vw,128px) 24px;}
+  .hero{padding:0;}
+  .sec-head{max-width:760px; margin-bottom:clamp(36px,5vw,64px);}
+  .sec-idx{display:flex; align-items:center; gap:12px; font:500 12px/1 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--dim); margin-bottom:18px;}
+  .sec-idx::after{content:""; height:1px; width:56px; background:currentColor; opacity:.6; transform-origin:left;}
+  .js .rv:not(.in) .sec-idx::after,.js .sec-idx.rv:not(.in)::after{transform:scaleX(0);}
+  .sec-idx::after{transition:transform .9s .2s var(--ease);}
+  .sec-head h2,.h2{font-weight:800; font-size:clamp(34px,5vw,66px); line-height:1; letter-spacing:-.03em; text-wrap:balance; margin-bottom:16px;}
+  .sec-head p{color:var(--dim); font-size:clamp(16px,1.4vw,19px); max-width:560px;}
+  .paper{background-color:var(--paper); color:var(--navy);
+    background-image:linear-gradient(var(--pline) 1px,transparent 1px),linear-gradient(90deg,var(--pline) 1px,transparent 1px); background-size:24px 24px; background-blend-mode:normal;}
+  .paper{background-image:linear-gradient(rgba(14,42,71,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(14,42,71,.07) 1px,transparent 1px);}
+  .paper .sec-idx,.paper .sec-head p{color:var(--pdim);}
+  .deep{background-color:var(--navy-2);}
+
+  /* services: numbered blueprint sheets */
+  .sheets{list-style:none; display:grid; gap:clamp(20px,3vw,36px);}
+  .sh{display:grid; grid-template-columns:minmax(80px,.7fr) minmax(0,3fr) minmax(0,2.2fr); gap:clamp(18px,3vw,44px); align-items:center; background:var(--paper); border:2px solid var(--navy); padding:clamp(20px,3vw,36px) clamp(20px,3vw,40px); position:relative; transition:transform .35s var(--ease), box-shadow .35s var(--ease);}
+  .sh:nth-child(even){margin-left:clamp(0px,7vw,110px); grid-template-columns:minmax(80px,.7fr) minmax(0,3fr) minmax(0,2.2fr);}
+  .sh:nth-child(odd){margin-right:clamp(0px,7vw,110px);}
+  .sh__no{font:500 clamp(48px,7vw,104px)/.9 var(--mono); color:var(--navy); letter-spacing:-.06em;}
+  .sh__no small{display:block; font-size:12px; letter-spacing:.1em; color:var(--pdim); margin-top:10px;}
+  .sh h3{font-weight:800; font-size:clamp(26px,3vw,40px); line-height:1.05; letter-spacing:-.02em; margin-bottom:12px;}
+  .sh p{color:var(--pdim); font-size:16px; max-width:52ch;}
+  .sh .also{margin-top:16px; padding-top:14px; border-top:1px dashed var(--navy); display:grid; gap:4px;}
+  .sh .also b{font:600 12px/1.4 var(--mono); letter-spacing:.08em; text-transform:uppercase;}
+  .sh .also p{font-size:15px;}
+  .sh__art{border:1px solid var(--pline); background:rgba(14,42,71,.04); aspect-ratio:8/5; color:var(--navy);}
+  .sh__art svg{width:100%; height:100%;}
+  .sh__art *{fill:none; stroke:currentColor; stroke-width:2; stroke-linejoin:miter;}
+  .sh__art .thin{stroke-width:1;}
+  .sh__art .dash{stroke-dasharray:6 5;}
+  .sh__art text{fill:currentColor; stroke:none; font:500 11px var(--mono); letter-spacing:.06em;}
+  .sh .sd{stroke-dasharray:1 1; stroke-dashoffset:0;}
+  .js .sh:not(.in) .sd{stroke-dashoffset:1;}
+  .js .sh .sd{transition:stroke-dashoffset 1.6s .25s var(--ease);}
+  .js .sh .sd.s2{transition-delay:.6s;} .js .sh .sd.s3{transition-delay:.95s;}
+  .js .sh__art text{transition:opacity .6s 1.5s;}
+  .js .sh:not(.in) .sh__art text{opacity:0;}
+  .sh__title{position:absolute; right:0; bottom:0; border-top:2px solid var(--navy); border-left:2px solid var(--navy); font:500 11px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; padding:7px 12px; background:var(--paper);}
+
+  /* trust strip as specification block */
+  .spec{padding:0 24px; background:var(--navy-2); border-top:1px solid var(--chalk); border-bottom:1px solid var(--chalk);}
+  .spec__grid{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); max-width:1192px; margin:0 auto;}
+  .spec__grid > div{padding:26px 24px; border-left:1px solid var(--chalk);}
+  .spec__grid > div:first-child{border-left:0; padding-left:0;}
+  .spec dt,.spec .k{font:500 11px/1.4 var(--mono); letter-spacing:.12em; text-transform:uppercase; color:var(--dim); margin-bottom:8px;}
+  .spec .v{font-weight:800; font-size:clamp(22px,2.4vw,32px); line-height:1.1; letter-spacing:-.02em;}
+  .spec p.s{color:var(--dim); font-size:14px; margin-top:4px;}
+
+  /* process timeline */
+  .proc{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:clamp(32px,6vw,96px); max-width:1192px; margin:0 auto;}
+  .proc__head{align-self:start; position:sticky; top:calc(var(--header-h) + 40px);}
+  .timeline{list-style:none; position:relative; --tp:1; padding-left:64px;}
+  .timeline::before,.timeline::after{content:""; position:absolute; left:19px; top:6px; bottom:6px; width:2px;}
+  .timeline::before{background:var(--chalk);}
+  .timeline::after{background:var(--paper); transform-origin:top; transform:scaleY(var(--tp));}
+  .timeline li{position:relative; padding:0 0 clamp(30px,4vw,48px);}
+  .timeline li:last-child{padding-bottom:0;}
+  .timeline .node{position:absolute; left:-64px; top:0; width:40px; height:40px; border:2px solid var(--paper); background:var(--navy); display:grid; place-items:center; font:600 13px/1 var(--mono); z-index:1; transition:background .3s, color .3s;}
+  .timeline li.in .node{background:var(--paper); color:var(--navy);}
+  .timeline li::before{content:""; position:absolute; left:-24px; top:19px; width:24px; height:1px; background:var(--paper); transform-origin:left;}
+  .js .timeline li:not(.in)::before{transform:scaleX(0);}
+  .timeline li::before{transition:transform .6s .1s var(--ease);}
+  .timeline h3{font-weight:800; font-size:clamp(22px,2.4vw,30px); letter-spacing:-.02em; line-height:1.1; margin:6px 0 8px;}
+  .timeline p{color:var(--dim); max-width:50ch;}
+
+  /* projects: drawn vs built + gallery */
+  .proj{max-width:1192px; margin:0 auto;}
+  .cmp{position:relative; aspect-ratio:8/5; border:1px solid var(--paper); background:var(--navy-2); overflow:hidden; --pos:50%; user-select:none; -webkit-user-select:none; touch-action:pan-y;}
+  .cmp__photo{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+  .cmp__plan{position:absolute; inset:0; background-color:var(--navy); background-image:linear-gradient(var(--chalk) 1px,transparent 1px),linear-gradient(90deg,var(--chalk) 1px,transparent 1px); background-size:24px 24px; clip-path:inset(0 calc(100% - var(--pos)) 0 0);}
+  .cmp__plan .plan{inset:0;}
+  .cmp__line{position:absolute; top:0; bottom:0; left:var(--pos); width:2px; margin-left:-1px; background:#fff; pointer-events:none; z-index:3;}
+  .cmp__line::after{content:"\2194"; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:48px; height:48px; display:grid; place-items:center; background:var(--navy); border:2px solid #fff; font:600 20px/1 var(--mono); color:#fff;}
+  .cmp__lab{position:absolute; top:12px; z-index:4; font:500 11px/1 var(--mono); letter-spacing:.12em; text-transform:uppercase; background:var(--navy-2); color:var(--paper); border:1px solid var(--chalk); padding:6px 9px; pointer-events:none;}
+  .cmp__lab--l{left:12px;} .cmp__lab--r{right:12px;}
+  .cmp__range{position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:ew-resize; -webkit-appearance:none; appearance:none; background:transparent; z-index:5;}
+  .cmp__range::-webkit-slider-thumb{-webkit-appearance:none; width:56px; height:1000px; background:transparent; border:0;}
+  .cmp__range::-moz-range-thumb{width:56px; height:1000px; background:transparent; border:0;}
+  .cmp-wrap{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,3fr); gap:clamp(20px,3vw,44px); align-items:center; margin-bottom:clamp(40px,6vw,80px);}
+  .cmp-note{font:400 13px/1.6 var(--mono); color:var(--dim); border-left:1px solid var(--paper); padding-left:16px;}
+  .cmp-note b{display:block; font-family:var(--display); font-weight:800; font-size:22px; line-height:1.15; color:var(--paper); margin-bottom:10px; letter-spacing:-.01em;}
+  .gal{display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); grid-auto-rows:clamp(170px,19vw,270px); gap:14px;}
+  .gal figure{position:relative; overflow:hidden; border:1px solid var(--chalk); background:var(--navy-2);}
+  .gal figure:nth-child(1){grid-column:1 / 8; grid-row:1 / 3;}
+  .gal figure:nth-child(2){grid-column:8 / 13; grid-row:1;}
+  .gal figure:nth-child(3){grid-column:8 / 13; grid-row:2;}
+  .gal img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .8s var(--ease), filter .5s; filter:saturate(.85);}
+  .gal figcaption{position:absolute; left:0; bottom:0; background:var(--navy); border-top:1px solid var(--paper); border-right:1px solid var(--paper); font:500 11px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; padding:9px 12px;}
+  .gal-note{margin-top:14px; font:400 12px/1.5 var(--mono); color:var(--dim);}
+
+  /* owner */
+  .owner{max-width:1040px; margin:0 auto; display:grid; grid-template-columns:minmax(0,4fr) minmax(0,7fr); gap:clamp(24px,5vw,72px); align-items:center;}
+  .owner__img{position:relative; border:2px solid var(--navy); background:var(--navy);}
+  .owner__img img{width:100%; aspect-ratio:1; object-fit:cover; filter:grayscale(.35) contrast(1.05);}
+  .owner__img::after{content:"FIG. 03"; position:absolute; right:-2px; bottom:-2px; background:var(--paper); border:2px solid var(--navy); font:500 11px/1 var(--mono); letter-spacing:.1em; padding:7px 10px;}
+  .owner blockquote{font-weight:800; font-size:clamp(22px,2.7vw,36px); line-height:1.18; letter-spacing:-.02em; margin-bottom:20px; text-wrap:pretty;}
+  .owner .who{font:500 13px/1.4 var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--pdim);}
+
+  /* reviews */
+  .rev-flag{display:inline-block; font:500 12px/1.4 var(--mono); letter-spacing:.06em; border:1px dashed var(--paper); padding:6px 10px; margin-top:18px; color:var(--dim);}
+  .revs{max-width:1192px; margin:0 auto; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(18px,2.5vw,32px); align-items:start;}
+  .rev{border:1px solid var(--paper); background:var(--navy); padding:26px 26px 22px; position:relative; transition:transform .3s var(--ease);}
+  .rev:nth-child(2){margin-top:44px;} .rev:nth-child(3){margin-top:88px;}
+  .rev .tag{position:absolute; top:-1px; right:-1px; font:500 10px/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; background:var(--paper); color:var(--navy); padding:6px 9px;}
+  .stars{font-size:15px; letter-spacing:3px; margin-bottom:14px;}
+  .rev p{font-size:18px; line-height:1.4; font-weight:600; letter-spacing:-.005em; margin-bottom:18px;}
+  .rev .who{font:500 12px/1.4 var(--mono); letter-spacing:.06em; text-transform:uppercase; color:var(--dim); display:flex; align-items:center; gap:10px;}
+  .avatar{width:30px; height:30px; border:1px solid var(--paper); display:grid; place-items:center; font:600 12px/1 var(--mono); color:var(--paper);}
+
+  /* faq */
+  .faq{max-width:900px;}
+  .faq details{border-top:1px solid var(--pline);}
+  .faq details:last-child{border-bottom:1px solid var(--pline);}
+  .faq summary{cursor:pointer; list-style:none; display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:64px; padding:18px 4px; font-weight:800; font-size:clamp(18px,2vw,23px); letter-spacing:-.015em; line-height:1.2; transition:padding .25s var(--ease);}
   .faq summary::-webkit-details-marker{display:none;}
-  .faq summary::after{content:"+"; float:right; font-size:22px; color:var(--accent);}
-  .faq details[open] summary::after{content:"–";}
-  .faq p{padding:0 22px 18px; color:var(--muted); font-size:15px;}
-  .map-contact{display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:900px; margin:0 auto;}
-  .map-contact iframe{width:100%; height:100%; min-height:260px; border:0; border-radius:16px; filter:invert(90%) hue-rotate(180deg);}
-  .cta-band{background:linear-gradient(120deg,#1c2a38,#0f1720); text-align:center;}
-  .cta-band h2{margin-bottom:14px;}
-  .cta-band p{color:var(--muted); margin-bottom:26px;}
-  footer{background:#0a1119; color:var(--muted); padding:40px 24px 90px; text-align:center; font-size:14px;}
-  footer a{color:var(--accent); text-decoration:none; display:inline-block; padding:10px 0;}
-  .sticky-cta{position:fixed; bottom:0; left:0; right:0; background:#0a1119; padding:12px 20px; display:none; justify-content:center; gap:12px; z-index:40; box-shadow:0 -8px 24px rgba(0,0,0,.4);}
-  .sticky-cta a{flex:1; text-align:center; max-width:280px; white-space:nowrap;}
-  @media(max-width:820px){
-    nav.main-nav{display:none;} .burger{display:flex;}
-    .hero__grid{grid-template-columns:1fr;}
-    .hero__media{order:-1; aspect-ratio:16/10;}
-    .band{grid-template-columns:1fr; }
-    .band img{height:200px;}
-    .owner{grid-template-columns:1fr; text-align:center;}
-    .owner img{max-width:180px; margin:0 auto;}
-    .map-contact{grid-template-columns:1fr;}
-    .sticky-cta{display:flex;}
-    footer{padding-bottom:100px;}
+  .faq summary::after{content:""; flex:none; width:28px; height:28px; border:2px solid var(--navy); background:linear-gradient(var(--navy),var(--navy)) center/12px 2px no-repeat, linear-gradient(var(--navy),var(--navy)) center/2px 12px no-repeat; transition:transform .3s var(--ease), background-size .3s;}
+  .faq details[open] summary::after{transform:rotate(180deg); background-size:12px 2px, 2px 0;}
+  .faq summary:hover{padding-left:12px;}
+  .faq p{padding:0 4px 24px; color:var(--pdim); max-width:62ch; animation:fadeIn .4s var(--ease);}
+  @keyframes fadeIn{from{opacity:0; transform:translateY(-6px);}}
+
+  /* quote cta + contact */
+  .cta-big{border-top:1px solid var(--chalk); border-bottom:1px solid var(--chalk); background:var(--navy-3);}
+  .cta-big__in{max-width:1192px; margin:0 auto; display:grid; grid-template-columns:minmax(0,8fr) minmax(0,4fr); gap:32px; align-items:center;}
+  .cta-big h2{font-weight:800; font-size:clamp(38px,6.4vw,92px); line-height:.95; letter-spacing:-.04em; margin-bottom:16px;}
+  .cta-big p{color:var(--dim); font-size:18px; max-width:46ch;}
+  .cta-big .btn{justify-self:start;}
+  .quote{max-width:1192px; margin:0 auto; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(20px,3vw,40px);}
+  .panel{border:1px solid var(--paper); padding:clamp(22px,3vw,36px); background:rgba(10,32,56,.7);}
+  .panel h3{font-weight:800; font-size:24px; letter-spacing:-.015em; margin-bottom:14px;}
+  .quote-checklist{list-style:none; counter-reset:q; display:grid; gap:12px;}
+  .quote-checklist li{counter-increment:q; display:grid; grid-template-columns:34px 1fr; gap:10px; color:var(--dim);}
+  .quote-checklist li::before{content:counter(q,decimal-leading-zero); font:500 13px/1.7 var(--mono); color:var(--paper);}
+  .quote-checklist strong{color:var(--paper);}
+  .contact-note{margin-top:14px; color:var(--dim); font-size:14px;}
+  .contact-note a{display:inline-block; padding:10px 0;}
+  .panel .btn{margin-top:20px;}
+  .panel p.pl{color:var(--dim);}
+  .contact-grid{max-width:1192px; margin:clamp(28px,4vw,48px) auto 0; display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:clamp(20px,3vw,40px);}
+  .info{display:grid; gap:clamp(16px,2vw,24px); align-content:start;}
+  .info .panel h3{display:flex; align-items:center; gap:10px;}
+  .info svg{width:22px; height:22px; flex:none; stroke:var(--paper); fill:none; stroke-width:1.8;}
+  .map-facade{position:relative; width:100%; height:100%; min-height:300px; overflow:hidden; background-color:var(--navy-2); border:1px solid var(--paper);
+    background-image:linear-gradient(var(--chalk) 1px,transparent 1px),linear-gradient(90deg,var(--chalk) 1px,transparent 1px); background-size:24px 24px;}
+  .map-facade__inner{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; text-align:center; padding:20px;}
+  .map-facade__inner strong{font-size:22px; font-weight:800;}
+  .map-facade__inner span{color:var(--dim); font:400 13px/1.4 var(--mono);}
+  .map-facade__inner a{color:var(--paper); font:600 13px/1 var(--mono); padding:10px 0; text-underline-offset:3px;}
+  .map-facade iframe{position:absolute; inset:0; width:100%; height:100%; border:0; filter:invert(90%) hue-rotate(180deg);}
+  .map-facade.is-loaded .map-facade__inner{inset:auto; bottom:10px; left:10px; right:auto; padding:6px 12px; background:rgba(10,32,56,.92); border:1px solid var(--chalk); flex-direction:row; z-index:2;}
+  .map-facade.is-loaded .map-facade__inner strong,.map-facade.is-loaded .map-facade__inner span,.map-facade.is-loaded .map-facade__inner button{display:none;}
+
+  /* footer: drawing title block */
+  footer{padding:clamp(40px,6vw,80px) 24px 110px; background:var(--navy-2); font-size:14px;}
+  .tb{max-width:1192px; margin:0 auto; border:2px solid var(--paper); display:grid; grid-template-columns:2fr 1.3fr 1.3fr 1.3fr;}
+  .tb > div{padding:16px 18px; border-left:1px solid var(--paper); border-top:1px solid var(--paper);}
+  .tb > div:nth-child(4n+1){border-left:0;}
+  .tb > div:nth-child(-n+4){border-top:0;}
+  .tb .k{font:500 10px/1.4 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--dim); margin-bottom:6px;}
+  .tb .v{color:var(--paper); line-height:1.5;}
+  .tb .big{grid-row:span 2; display:flex; flex-direction:column; justify-content:space-between; gap:20px;}
+  .tb .big strong{font-weight:800; font-size:clamp(34px,4.6vw,64px); line-height:.92; letter-spacing:-.04em;}
+  .tb a{color:var(--paper); text-underline-offset:3px; display:inline-block; padding:8px 0;}
+  .tb .wide{grid-column:span 3;}
+
+  .sticky-cta{position:fixed; bottom:0; left:0; right:0; background:var(--navy-2); border-top:1px solid var(--paper); padding:10px 14px calc(10px + env(safe-area-inset-bottom)); display:none; gap:10px; z-index:40;}
+  .sticky-cta .btn{flex:1; white-space:nowrap; padding-left:10px; padding-right:10px;}
+  .sticky-cta .btn--cta{flex:1.6;}
+
+  /* mouse-only effects */
+  @media (hover:hover) and (pointer:fine){
+    .sh:hover{transform:translate(-4px,-4px); box-shadow:8px 8px 0 var(--navy);}
+    .sh:hover .sh__no{transform:translateX(6px);}
+    .sh__no{transition:transform .35s var(--ease);}
+    .rev:hover{transform:translateY(-6px);}
+    .gal figure:hover img{transform:scale(1.05); filter:saturate(1.05);}
+    .hero__sheet{cursor:crosshair;}
   }
 
-  /* Task A: content and quote journey. */
-  .hero__note{margin-top:18px; font-size:14px !important;}
-  .trust-strip .stat{font-size:21px; margin-bottom:6px;}
-  .hero__note a{color:var(--accent);}
-  .contact-note a{display:inline-block; padding:10px 0;}
-  .process-list{list-style:none; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; counter-reset:job;}
-  .process-list li{counter-increment:job; border-top:1px solid var(--line); padding-top:20px;}
-  .process-list li::before{content:counter(job, decimal-leading-zero); display:block; color:var(--accent); font-family:'Archivo',sans-serif; font-size:28px; margin-bottom:8px;}
-  .process-list h3{font-size:20px; margin-bottom:8px;}
-  .process-list p,.contact-note{color:var(--muted); font-size:14px;}
-  .band figure{min-width:0;}
-  .band figcaption{padding:12px 4px 0; color:var(--muted); font-size:14px;}
-  .quote-prep{max-width:900px; margin:0 auto 28px; display:grid; grid-template-columns:1fr 1fr; gap:28px;}
-  .quote-prep h3{margin-bottom:12px;}
-  .quote-checklist{padding-left:22px;}
-  .quote-checklist li{margin-bottom:10px; color:var(--muted);}
-  .quote-checklist strong{color:var(--ink);}
-  .contact-note{margin:14px 0;}
+  @media(max-width:1020px){
+    .proc,.cmp-wrap,.contact-grid,.cta-big__in,.owner,.quote{grid-template-columns:1fr;}
+    .proc__head{position:static;}
+    .revs{grid-template-columns:1fr; max-width:560px;}
+    .rev:nth-child(n){margin-top:0;}
+    .rev:nth-child(2){margin-left:28px;} .rev:nth-child(3){margin-left:56px;}
+    .sh,.sh:nth-child(even){grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); margin-left:0; margin-right:0;}
+    .sh__no{grid-column:1 / -1; display:flex; align-items:baseline; gap:16px; font-size:56px;}
+    .sh__no small{margin:0;}
+    .owner__img{max-width:320px;}
+    .tb{grid-template-columns:1fr 1fr;}
+    .tb > div:nth-child(n){border-left:1px solid var(--paper); border-top:1px solid var(--paper);}
+    .tb > div:nth-child(odd){border-left:0;}
+    .tb .big{grid-column:1 / -1; grid-row:auto;}
+    .tb .wide{grid-column:1 / -1;}
+  }
   @media(max-width:820px){
-    .hero{padding-top:36px; padding-bottom:40px;}
-    .hero__media{order:0;}
-    .process-list{grid-template-columns:repeat(2,minmax(0,1fr));}
-    .quote-prep{grid-template-columns:1fr;}
+    nav.main-nav,.header__cta{display:none;}
+    .burger{display:flex;}
+    .sticky-cta{display:flex;}
+    .hero__stage{grid-template-columns:minmax(0,1fr); grid-template-areas:"strip" "h1" "sheet" "lede" "cta" "note"; padding:20px 16px 36px; min-height:0;}
+    .hero__strip{margin-bottom:14px;}
+    .hero h1{font-size:clamp(40px,11.4vw,64px); margin-bottom:22px;}
+    .sheet-fig{grid-row:auto; margin:0 -16px 26px; max-width:none; width:auto; justify-self:stretch;}
+    .hero__sheet{border-left:0; border-right:0;}
+    .sheet-fig figcaption{padding:0 16px;}
+    .hero__cta .btn{width:100%;}
+    .plan text{font-size:21px;}
+    .gal{grid-template-columns:1fr; grid-auto-rows:auto;}
+    .gal figure:nth-child(n){grid-column:1; grid-row:auto; aspect-ratio:4/3;}
+    .spec__grid{grid-template-columns:1fr 1fr;}
+    .spec__grid > div:nth-child(odd){border-left:0; padding-left:0;}
+    .spec__grid > div:nth-child(n+3){border-top:1px solid var(--chalk);}
+    .cta-big .btn{width:100%;}
+  }
+  @media(max-width:600px){
+    .sh,.sh:nth-child(even){grid-template-columns:1fr;}
+    .sh__no{font-size:48px;}
+    .sh__title{position:static; display:block; margin:8px -20px -20px; border-left:0; border-right:0; border-bottom:0;}
+    .rev:nth-child(2){margin-left:14px;} .rev:nth-child(3){margin-left:28px;}
+    .timeline{padding-left:56px;} .timeline .node{left:-56px; width:36px; height:36px;} .timeline::before,.timeline::after{left:17px;} .timeline li::before{left:-20px; top:17px; width:20px;}
+    .quote,.contact-grid{gap:16px;}
+    .tb{grid-template-columns:1fr;}
+    .tb > div:nth-child(n){border-left:0;}
   }
   @media(max-width:480px){
-    .process-list{grid-template-columns:1fr;}
-    .sticky-cta{gap:8px; padding:12px;}
-    .sticky-cta .btn{padding:12px 10px; font-size:14px;}
-    .topbar__inner,.header__inner{padding-left:16px; padding-right:16px;}
-    .mobile-menu{padding-left:16px; padding-right:16px;}
     section{padding-left:16px; padding-right:16px;}
-    section .wrap{padding-left:0; padding-right:0;}
-    .hero{padding-left:16px; padding-right:16px;}
-    .owner{padding:24px;}
+    .wrap{padding-left:16px; padding-right:16px;}
+    .spec{padding:0 16px;}
+    footer{padding-left:16px; padding-right:16px;}
+    .mobile-menu{padding-left:16px; padding-right:16px;}
+    .brand em{display:none;}
   }
-  @media(min-width:821px){
-    .mobile-menu,.mobile-menu.open{display:none;}
-  }
+  @media(min-width:821px){.mobile-menu,.mobile-menu.open{display:none;}}
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
     *,*::before,*::after{animation:none !important; transition:none !important; scroll-behavior:auto !important;}
-    .js .reveal{opacity:1; transform:none;}
-    .btn:hover,.card:hover,.review:hover{transform:none;}
+    .js .rv,.js .rv-l,.js .rv-r{opacity:1; transform:none;}
+    .js .sh:not(.in) .sd{stroke-dashoffset:0;}
+    .js .sh:not(.in) .sh__art text{opacity:1;}
+    .timeline{--tp:1;}
   }
-  footer a[href="privacy.html"]{text-decoration:underline; text-underline-offset:3px;}
-  /* Former inline style attributes (moved here for a stricter CSP) */
-  .u-s1{padding:0 !important;}
-  .u-s2{padding:70px 24px 40px !important;}
-  .u-s3{grid-template-columns:1fr !important;}
-  .u-s4{text-align:center !important;}
 </style>
 </head>
 <body>
@@ -239,7 +455,10 @@
 
 <header id="siteHeader">
   <div class="wrap header__inner">
-    <a class="brand" href="#top">Lani <span>Builders</span></a>
+    <a class="brand" href="#top" aria-label="Lani Builders, back to top">
+      <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3H29V29H3Z"/><path d="M9 9V23H23" stroke-width="3"/><path d="M3 16H7M16 3V7" stroke-width="1"/></svg>
+      <span>Lani Builders</span><em>Northfield</em>
+    </a>
     <nav class="main-nav" aria-label="Main">
       <ul>
         <li><a href="#services">Services</a></li>
@@ -248,6 +467,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <a class="btn btn--cta btn--sm header__cta" href="#contact">Get a free quote</a>
     <button class="burger" id="burgerBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
     <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile">
       <a href="#services">Services</a>
@@ -259,123 +479,190 @@
 </header>
 
 <main id="main" tabindex="-1">
-<section class="hero" id="top">
-  <div class="wrap hero__grid">
-    <div>
-      <span class="hero__tag">Lani Builders &middot; Northfield, Birmingham</span>
-      <h1>Make more of<br><span>your Northfield home.</span></h1>
-      <p>An extension for more room, or a renovation to make the space you have work harder. Talk your plans through with Lani Builders, based right here in Northfield.</p>
-      <div class="hero__actions">
-        <a href="#contact" class="btn btn--accent">Get a free quote</a>
-        <!-- PLACEHOLDER: owner-confirmed phone number needed -->
-        <a href="tel:+441214960003" class="btn btn--outline">Call us</a>
-        <!-- /PLACEHOLDER -->
+
+<section class="hero" id="top" aria-label="Lani Builders, builders in Northfield, Birmingham">
+  <div class="hero__stage">
+    <p class="hero__strip">Lani Builders &middot; Northfield, Birmingham</p>
+    <h1>Planned to the <span class="mm">millimetre.</span> <span class="bt">Built to last.</span></h1>
+    <p class="hero__lede">An extension for more room, or a renovation to make the space you have work harder. Talk your plans through with Lani Builders, based right here in Northfield.</p>
+    <div class="hero__cta"><a href="#contact" class="btn btn--cta">Get a free quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 12H19M13 6L19 12L13 18"/></svg></a></div>
+    <p class="hero__note">Have rough sizes, a few photos, your postcode and your ideal timescale to hand? <a href="#process">See how a job runs</a>.</p>
+
+    <figure class="sheet-fig">
+      <div class="hero__sheet" id="heroSheet" role="img" aria-label="A modern renovated kitchen that turns into a measured floor plan of the same room as you scroll">
+        <picture>
+          <source media="(max-width:820px)" srcset="images/33257996-w640-h400-6f8d70.webp 640w, images/33257996-w1000-h625-fda3b8.webp 1000w" sizes="100vw" />
+          <img class="hero__photo" src="images/33257996-w1000-h625-fda3b8.webp" srcset="images/33257996-w640-h400-6f8d70.webp 640w, images/33257996-w1000-h625-fda3b8.webp 1000w, images/33257996-w1300-h813-447e64.webp 1300w" sizes="(min-width:1320px) 760px, (min-width:821px) 56vw, 100vw" width="1300" height="813" alt="" fetchpriority="high" decoding="async" />
+        </picture>
+        <div class="hero__tint"></div>
+        <div class="hero__grid24"></div>
+        <svg class="plan " viewBox="0 0 640 400" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><path class="hd t1 " pathLength="1" d="M100 24H540V344H100Z"/><path class="hd t2 " pathLength="1" d="M110 34H530V334H110Z"/><path class="hd t3 thin" pathLength="1" d="M250 24H390M250 29H390M250 34H390"/><path class="hd t4 thin" pathLength="1" d="M140 334V264A70 70 0 0 1 210 334"/><path class="hd t5 " pathLength="1" d="M110 34H156V234H110Z"/><path class="hd t5 " pathLength="1" d="M156 34H206V84H156Z"/><path class="hd t6 thin" pathLength="1" d="M118 84H148V144H118Z"/><circle class="hd t6 thin" pathLength="1" cx="126" cy="168" r="5"/><circle class="hd t6 thin" pathLength="1" cx="142" cy="168" r="5"/><circle class="hd t6 thin" pathLength="1" cx="126" cy="190" r="5"/><circle class="hd t6 thin" pathLength="1" cx="142" cy="190" r="5"/><circle class="hd t6 thin" pathLength="1" cx="133" cy="98" r="3"/><path class="hd t7 " pathLength="1" d="M270 190H430V260H270Z"/><circle class="hd t7 thin" pathLength="1" cx="300" cy="282" r="11"/><circle class="hd t7 thin" pathLength="1" cx="350" cy="282" r="11"/><circle class="hd t7 thin" pathLength="1" cx="400" cy="282" r="11"/><path class="hd t8 thin" pathLength="1" d="M100 366H540M100 358V374M540 358V374M110 362L100 366L110 370M530 362L540 366L530 370"/><path class="hd t8 thin" pathLength="1" d="M72 24V344M64 24H80M64 344H80M68 34L72 24L76 34M68 334L72 344L76 334"/><path class="hd t8 thin" pathLength="1" d="M270 176H430M270 170V182M430 170V182M280 172L270 176L280 180M420 172L430 176L420 180"/><path class="hd t8 thin" pathLength="1" d="M250 56H390M250 50V62M390 50V62M260 52L250 56L260 60M380 52L390 56L380 60"/><g class="dt"><text x="320" y="388" text-anchor="middle">4.2 m</text><text x="46" y="184" text-anchor="middle" transform="rotate(-90 46 184)">3.0 m</text><text x="350" y="166" text-anchor="middle">1.6 m</text><text x="320" y="46" text-anchor="middle">1.4 m</text></g></svg>
+        <i class="xh xh--x"></i><i class="xh xh--y"></i><span class="xh-read" id="xhRead">X 0000 / Y 0000</span>
       </div>
-      <p class="hero__note">Have rough sizes, a few photos, your postcode and your ideal timescale to hand? <a href="#process">See how a job runs</a>.</p>
-    </div>
-    <div class="hero__media">
-      <picture>
-        <source media="(max-width:820px)" srcset="images/33257996-w640-h400-6f8d70.webp 640w, images/33257996-w1000-h625-fda3b8.webp 1000w, images/33257996-w1300-h813-447e64.webp 1300w" sizes="100vw" />
-        <img src="images/33257996-w800-h1000-84f76f.webp" srcset="images/33257996-w520-h650-ff5d79.webp 520w, images/33257996-w800-h1000-84f76f.webp 800w, images/33257996-w1040-h1300-7c1085.webp 1040w" sizes="(min-width:1200px) 540px, 48vw" width="800" height="1000" alt="Modern renovated kitchen" fetchpriority="high" decoding="async" />
-      </picture>
-    </div>
+      <figcaption>
+        <span class="readout" aria-hidden="true"><b id="rdPhoto" class="on">Fig. 01 Photo</b><i></i><b id="rdPlan">Fig. 02 Plan</b></span>
+        <span class="scrollhint" aria-hidden="true">Scroll to draw <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 4V20M6 14L12 20L18 14"/></svg></span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
-<section id="services">
+<section class="spec" aria-label="Why choose Lani Builders">
+  <div class="spec__grid">
+    <!-- PLACEHOLDER: add real trade accreditations (e.g. FMB, TrustMark) here if held; free-quote tile used meanwhile -->
+    <div class="rv"><p class="k">Quotes</p><p class="v">Free quotes</p><p class="s">No-obligation site visit</p></div>
+    <!-- /PLACEHOLDER -->
+    <!-- PLACEHOLDER: confirm insurance cover and evidence -->
+    <div class="rv"><p class="k">Cover</p><p class="v">Fully insured</p><p class="s">Public liability cover</p></div>
+    <!-- /PLACEHOLDER -->
+    <!-- PLACEHOLDER: confirm workmanship guarantee terms and duration -->
+    <div class="rv"><p class="k">Workmanship</p><p class="v">Guaranteed</p><p class="s">Workmanship guarantee</p></div>
+    <!-- /PLACEHOLDER -->
+    <!-- PLACEHOLDER: confirm years in business -->
+    <div class="rv"><p class="k">Experience</p><p class="v">12+</p><p class="s">Years in business</p></div>
+    <!-- /PLACEHOLDER -->
+  </div>
+</section>
+
+<section id="services" class="paper">
   <div class="wrap">
-    <div class="section__head reveal">
+    <div class="sec-head rv">
+      <p class="sec-idx">01 / Services</p>
       <h2>Room to grow. Space to rethink.</h2>
       <p>From a cracked lintel to a full extension.</p>
     </div>
-    <div class="grid">
-      <!-- PLACEHOLDER: confirm service list -->
-      <div class="card reveal"><div class="icon">🏠</div><h3>Extensions</h3><p>Single or double-storey &mdash; Lani walks the plan through with you on-site, not off a generic template.</p></div>
-      <div class="card reveal"><div class="icon">🧱</div><h3>Renovations</h3><p>Kitchen and bathroom strip-outs scheduled around your routine, so you're not without one for longer than you have to be.</p></div>
-      <div class="card reveal"><div class="icon">🏗️</div><h3>General Building</h3><p>The unglamorous jobs &mdash; a cracked lintel, a dodgy wall &mdash; fixed properly instead of papered over.</p></div>
-      <div class="card reveal"><div class="icon">🪟</div><h3>Roofing &amp; Repairs</h3><p>We check the guttering while we're already up there, and flag anything else worth keeping an eye on.</p></div>
-      <div class="card reveal"><div class="icon">🏡</div><h3>Loft Conversions</h3><p>Dead space upstairs turned into a proper bedroom or home office, with the stairs and insulation planned in from the start.</p></div>
-      <div class="card reveal"><div class="icon">🚧</div><h3>Driveways &amp; Patios</h3><p>Block paving laid to actually drain &mdash; no puddle by the back door every time it rains.</p></div>
-      <!-- /PLACEHOLDER -->
-    </div>
-  </div>
-</section>
-
-<section class="strip trust-strip" aria-label="Why choose Lani Builders">
-  <div class="wrap grid">
-    <!-- PLACEHOLDER: add real trade accreditations (e.g. FMB, TrustMark) here if held; free-quote tile used meanwhile -->
-    <div class="reveal"><p class="stat">Free quotes</p><p>No-obligation site visit</p></div>
-    <!-- /PLACEHOLDER -->
-    <!-- PLACEHOLDER: confirm insurance cover and evidence -->
-    <div class="reveal"><p class="stat">Fully insured</p><p>Public liability cover</p></div>
-    <!-- /PLACEHOLDER -->
-    <!-- PLACEHOLDER: confirm workmanship guarantee terms and duration -->
-    <div class="reveal"><p class="stat">Guaranteed</p><p>Workmanship guarantee</p></div>
-    <!-- /PLACEHOLDER -->
-    <!-- PLACEHOLDER: confirm years in business -->
-    <div class="reveal"><p class="stat">12+</p><p>Years in business</p></div>
+    <!-- PLACEHOLDER: confirm service list -->
+    <ol class="sheets">
+      <li class="sh rv-l">
+        <div class="sh__no">01<small>of 04</small></div>
+        <div>
+          <h3>Extensions</h3>
+          <p>Single or double-storey &mdash; Lani walks the plan through with you on-site, not off a generic template.</p>
+          <div class="also"><b>Also on this sheet: Loft conversions</b><p>Dead space upstairs turned into a proper bedroom or home office, with the stairs and insulation planned in from the start.</p></div>
+        </div>
+        <div class="sh__art" aria-hidden="true">
+          <svg viewBox="0 0 240 150"><path class="sd" pathLength="1" d="M20 120V62L70 30L120 62V120Z"/><path class="sd s2" pathLength="1" d="M120 120V82H206V120"/><path class="sd s2 dash" pathLength="1" d="M114 82L163 60L212 82"/><path class="sd s3 thin" pathLength="1" d="M10 120H232M44 120V92H62V120M150 120V98H180V120"/><path class="thin" d="M120 134H206M126 130L120 134L126 138M200 130L206 134L200 138"/><text x="163" y="146" text-anchor="middle">NEW</text></svg>
+        </div>
+        <span class="sh__title">Sheet 01 / Extensions</span>
+      </li>
+      <li class="sh rv-r">
+        <div class="sh__no">02<small>of 04</small></div>
+        <div>
+          <h3>Renovations</h3>
+          <p>The unglamorous jobs &mdash; a cracked lintel, a dodgy wall &mdash; fixed properly instead of papered over.</p>
+          <div class="also"><b>Also on this sheet: Driveways &amp; patios</b><p>Block paving laid to actually drain &mdash; no puddle by the back door every time it rains.</p></div>
+        </div>
+        <div class="sh__art" aria-hidden="true">
+          <svg viewBox="0 0 240 150"><path class="sd" pathLength="1" d="M30 24H210V126H30Z"/><path class="sd s2" pathLength="1" d="M90 126V62H150V126"/><path class="sd s2" pathLength="1" d="M80 62H160V52H80Z"/><path class="sd s3 thin" pathLength="1" d="M30 38H210M30 50H80M160 50H210M30 62H90M150 62H210M30 76H90M150 76H210M30 90H90M150 90H210M30 104H90M150 104H210M30 116H90M150 116H210"/><text x="120" y="42" text-anchor="middle">LINTEL</text></svg>
+        </div>
+        <span class="sh__title">Sheet 02 / Renovations</span>
+      </li>
+      <li class="sh rv-l">
+        <div class="sh__no">03<small>of 04</small></div>
+        <div>
+          <h3>Kitchens</h3>
+          <p>Kitchen and bathroom strip-outs scheduled around your routine, so you're not without one for longer than you have to be.</p>
+        </div>
+        <div class="sh__art" aria-hidden="true">
+          <svg viewBox="0 0 240 150"><path class="sd" pathLength="1" d="M20 126V86H220V126Z"/><path class="sd s2" pathLength="1" d="M14 86H226M20 16V58H96V16Z M144 16V58H220V16Z"/><path class="sd s2" pathLength="1" d="M104 58L112 22H128L136 58"/><path class="sd s3 thin" pathLength="1" d="M70 86V126M120 86V126M170 86V126M100 80H140M108 80V74H132V80M58 16V58M182 16V58M10 126H230"/><circle class="thin" cx="116" cy="97" r="0"/></svg>
+        </div>
+        <span class="sh__title">Sheet 03 / Kitchens</span>
+      </li>
+      <li class="sh rv-r">
+        <div class="sh__no">04<small>of 04</small></div>
+        <div>
+          <h3>Repairs</h3>
+          <p>We check the guttering while we're already up there, and flag anything else worth keeping an eye on.</p>
+          <div class="also"><b>Roofing &amp; repairs</b><p>Honest about what needs doing now and what can wait.</p></div>
+        </div>
+        <div class="sh__art" aria-hidden="true">
+          <svg viewBox="0 0 240 150"><path class="sd" pathLength="1" d="M16 112L120 36L224 112"/><path class="sd s2" pathLength="1" d="M26 122L120 52L214 122"/><path class="sd s2 thin" pathLength="1" d="M40 122H200M120 52V122M72 122L120 84M168 122L120 84"/><path class="sd s3" pathLength="1" d="M214 118H234V132"/><path class="thin dash" d="M14 134H226"/></svg>
+        </div>
+        <span class="sh__title">Sheet 04 / Repairs</span>
+      </li>
+    </ol>
     <!-- /PLACEHOLDER -->
   </div>
 </section>
 
 <section id="process">
-  <div class="wrap">
-    <div class="section__head reveal">
-      <h2>How a job runs</h2>
-      <p>From the first look at your home to the final walk-through.</p>
+  <div class="proc">
+    <div class="proc__head rv">
+      <p class="sec-idx">02 / Process</p>
+      <h2 class="h2">How a job runs</h2>
+      <p class="proc__sub" >From the first look at your home to the final walk-through.</p>
     </div>
-    <ol class="process-list">
-      <li><h3>Site visit</h3><p>Lani walks the space with you, looks at your ideas and any drawings, and talks through access, rough measurements and what needs to stay usable during the work.</p></li>
-      <li><h3>Written quote</h3><p>The scope, materials and costs set out in writing, including what is excluded and any decisions still to be made.</p></li>
-      <li><h3>Agree the schedule</h3><p>The order of work, access arrangements and any approvals needed are confirmed before a start date is agreed.</p></li>
-      <li><h3>The build</h3><p>Work moves through the agreed stages. Any change to scope or cost is discussed before extra work goes ahead.</p></li>
-      <li><h3>Snagging</h3><p>A walk-through of the finished work together, with any outstanding items listed and a plan to put them right.</p></li>
-      <li><h3>Sign-off &amp; handover</h3><p>Final check of the agreed work, relevant paperwork and care instructions handed over.</p></li>
+    <ol class="timeline" id="timeline">
+      <li class="rv-l"><span class="node" aria-hidden="true">01</span><h3>Site visit</h3><p>Lani walks the space with you, looks at your ideas and any drawings, and talks through access, rough measurements and what needs to stay usable during the work.</p></li>
+      <li class="rv-l"><span class="node" aria-hidden="true">02</span><h3>Written quote</h3><p>The scope, materials and costs set out in writing, including what is excluded and any decisions still to be made.</p></li>
+      <li class="rv-l"><span class="node" aria-hidden="true">03</span><h3>Agree the schedule</h3><p>The order of work, access arrangements and any approvals needed are confirmed before a start date is agreed.</p></li>
+      <li class="rv-l"><span class="node" aria-hidden="true">04</span><h3>The build</h3><p>Work moves through the agreed stages. Any change to scope or cost is discussed before extra work goes ahead.</p></li>
+      <li class="rv-l"><span class="node" aria-hidden="true">05</span><h3>Snagging</h3><p>A walk-through of the finished work together, with any outstanding items listed and a plan to put them right.</p></li>
+      <li class="rv-l"><span class="node" aria-hidden="true">06</span><h3>Sign-off &amp; handover</h3><p>Final check of the agreed work, relevant paperwork and care instructions handed over.</p></li>
     </ol>
   </div>
 </section>
 
-<section class="u-s1" id="projects">
-  <div class="section__head reveal u-s2">
-    <h2>The kind of work we take on</h2>
-    <p>New walls going up, roofs getting fixed and homes growing outwards across Northfield and beyond.</p>
-  </div>
-  <div class="band reveal">
-    <figure><img src="images/4692281-w600-h454-55bee0.webp" srcset="images/4692281-w400-h303-692d92.webp 400w, images/4692281-w600-h454-55bee0.webp 600w, images/4692281-w900-h681-59479e.webp 900w" sizes="(max-width:820px) 100vw, 33vw" width="600" height="454" alt="Brick house under construction" loading="lazy" decoding="async" /><figcaption>Extensions &amp; new build</figcaption></figure>
-    <figure><img src="images/32751450-w600-h454-989969.webp" srcset="images/32751450-w400-h303-a9e065.webp 400w, images/32751450-w600-h454-989969.webp 600w, images/32751450-w900-h681-27ff29.webp 900w" sizes="(max-width:820px) 100vw, 33vw" width="600" height="454" alt="Builder laying concrete block wall" loading="lazy" decoding="async" /><figcaption>Blockwork &amp; structural work</figcaption></figure>
-    <figure><img src="images/38749917-w600-h454-a64af2.webp" srcset="images/38749917-w400-h303-ae55fa.webp 400w, images/38749917-w600-h454-a64af2.webp 600w, images/38749917-w900-h681-544eb8.webp 900w" sizes="(max-width:820px) 100vw, 33vw" width="600" height="454" alt="Roofer working on a roof" loading="lazy" decoding="async" /><figcaption>Roofing &amp; repairs</figcaption></figure>
+<section id="projects" class="deep">
+  <div class="proj">
+    <div class="sec-head rv">
+      <p class="sec-idx">03 / Projects</p>
+      <h2>The kind of work we take on</h2>
+      <p>New walls going up, roofs getting fixed and homes growing outwards across Northfield and beyond.</p>
+    </div>
+    <div class="cmp-wrap">
+      <div class="cmp rv" id="cmp">
+        <img class="cmp__photo" src="images/33257996-w1000-h625-fda3b8.webp" srcset="images/33257996-w640-h400-6f8d70.webp 640w, images/33257996-w1000-h625-fda3b8.webp 1000w, images/33257996-w1300-h813-447e64.webp 1300w" sizes="(min-width:1240px) 840px, 100vw" width="1300" height="813" alt="Finished modern kitchen (illustrative stock photo)" loading="lazy" decoding="async" />
+        <div class="cmp__plan" aria-hidden="true"><svg class="plan plan--static" viewBox="0 0 640 400" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><path class=" " pathLength="1" d="M100 24H540V344H100Z"/><path class=" " pathLength="1" d="M110 34H530V334H110Z"/><path class=" thin" pathLength="1" d="M250 24H390M250 29H390M250 34H390"/><path class=" thin" pathLength="1" d="M140 334V264A70 70 0 0 1 210 334"/><path class=" " pathLength="1" d="M110 34H156V234H110Z"/><path class=" " pathLength="1" d="M156 34H206V84H156Z"/><path class=" thin" pathLength="1" d="M118 84H148V144H118Z"/><circle class=" thin" pathLength="1" cx="126" cy="168" r="5"/><circle class=" thin" pathLength="1" cx="142" cy="168" r="5"/><circle class=" thin" pathLength="1" cx="126" cy="190" r="5"/><circle class=" thin" pathLength="1" cx="142" cy="190" r="5"/><circle class=" thin" pathLength="1" cx="133" cy="98" r="3"/><path class=" " pathLength="1" d="M270 190H430V260H270Z"/><circle class=" thin" pathLength="1" cx="300" cy="282" r="11"/><circle class=" thin" pathLength="1" cx="350" cy="282" r="11"/><circle class=" thin" pathLength="1" cx="400" cy="282" r="11"/><path class=" thin" pathLength="1" d="M100 366H540M100 358V374M540 358V374M110 362L100 366L110 370M530 362L540 366L530 370"/><path class=" thin" pathLength="1" d="M72 24V344M64 24H80M64 344H80M68 34L72 24L76 34M68 334L72 344L76 334"/><path class=" thin" pathLength="1" d="M270 176H430M270 170V182M430 170V182M280 172L270 176L280 180M420 172L430 176L420 180"/><path class=" thin" pathLength="1" d="M250 56H390M250 50V62M390 50V62M260 52L250 56L260 60M380 52L390 56L380 60"/><g class="dt"><text x="320" y="388" text-anchor="middle">4.2 m</text><text x="46" y="184" text-anchor="middle" transform="rotate(-90 46 184)">3.0 m</text><text x="350" y="166" text-anchor="middle">1.6 m</text><text x="320" y="46" text-anchor="middle">1.4 m</text></g></svg></div>
+        <span class="cmp__lab cmp__lab--l" aria-hidden="true">Drawn</span><span class="cmp__lab cmp__lab--r" aria-hidden="true">Built</span>
+        <span class="cmp__line" aria-hidden="true"></span>
+        <input class="cmp__range" id="cmpRange" type="range" min="0" max="100" value="50" step="1" aria-label="Drag to compare the drawn floor plan with the finished kitchen" />
+      </div>
+      <div class="cmp-note rv"><b>From drawing to finished room.</b>Drag the line, or use the arrow keys. Every job starts as a measured plan like this one.<br><br>
+        <!-- PLACEHOLDER: replace the stock kitchen and the illustrative plan with one of Lani's own before/after jobs -->
+        Illustrative stock photo and plan. Swap in a real before and after.
+        <!-- /PLACEHOLDER --></div>
+    </div>
+    <div class="gal">
+      <figure class="rv"><img src="images/4692281-w900-h681-59479e.webp" srcset="images/4692281-w400-h303-692d92.webp 400w, images/4692281-w600-h454-55bee0.webp 600w, images/4692281-w900-h681-59479e.webp 900w" sizes="(max-width:820px) 100vw, 58vw" width="900" height="681" alt="Brick house under construction" loading="lazy" decoding="async" /><figcaption>Extensions &amp; new build</figcaption></figure>
+      <figure class="rv"><img src="images/32751450-w600-h454-989969.webp" srcset="images/32751450-w400-h303-a9e065.webp 400w, images/32751450-w600-h454-989969.webp 600w, images/32751450-w900-h681-27ff29.webp 900w" sizes="(max-width:820px) 100vw, 40vw" width="600" height="454" alt="Builder laying concrete block wall" loading="lazy" decoding="async" /><figcaption>Blockwork &amp; structural work</figcaption></figure>
+      <figure class="rv"><img src="images/38749917-w600-h454-a64af2.webp" srcset="images/38749917-w400-h303-ae55fa.webp 400w, images/38749917-w600-h454-a64af2.webp 600w, images/38749917-w900-h681-544eb8.webp 900w" sizes="(max-width:820px) 100vw, 40vw" width="600" height="454" alt="Roofer working on a roof" loading="lazy" decoding="async" /><figcaption>Roofing &amp; repairs</figcaption></figure>
+    </div>
+    <p class="gal-note">Stock photography shown for illustration, not Lani's own jobs.</p>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <div class="owner reveal">
-      <img src="images/6720533-w440-h440-a3ee92.webp" srcset="images/6720533-w220-h220-e434a1.webp 220w, images/6720533-w440-h440-a3ee92.webp 440w" sizes="(max-width:820px) 180px, 220px" width="440" height="440" alt="Builder on site" loading="lazy" decoding="async" />
-      <div>
-        <!-- PLACEHOLDER: replace with the owner's approved quote and name -->
-        <blockquote>"I've worked on homes across Northfield for over a decade. I still turn up to every job myself &mdash; you get the same standard whether it's a cracked lintel or a full extension."</blockquote>
-        <div class="who">&mdash; Lani, Founder</div>
-        <!-- /PLACEHOLDER -->
-      </div>
+<section class="paper" aria-label="From the founder">
+  <div class="owner">
+    <div class="owner__img rv-l">
+      <img src="images/6720533-w440-h440-a3ee92.webp" srcset="images/6720533-w220-h220-e434a1.webp 220w, images/6720533-w440-h440-a3ee92.webp 440w" sizes="(max-width:1020px) 320px, 360px" width="440" height="440" alt="Builder on site" loading="lazy" decoding="async" />
+    </div>
+    <div class="rv-r">
+      <!-- PLACEHOLDER: replace with the owner's approved quote and name -->
+      <blockquote>"I've worked on homes across Northfield for over a decade. I still turn up to every job myself &mdash; you get the same standard whether it's a cracked lintel or a full extension."</blockquote>
+      <div class="who">&mdash; Lani, Founder</div>
+      <!-- /PLACEHOLDER -->
     </div>
   </div>
 </section>
 
-<section id="reviews" class="reviews">
+<section id="reviews">
   <div class="wrap">
-    <div class="section__head reveal">
+    <div class="sec-head rv">
+      <p class="sec-idx">04 / Reviews</p>
       <h2>What locals say</h2>
       <p>Feedback from jobs around Northfield.</p>
+      <span class="rev-flag">Demo reviews. Replace with real Google reviews before launch.</span>
     </div>
-    <div class="review-grid">
+    <div class="revs">
       <!-- PLACEHOLDER: replace with real Google reviews -->
-      <div class="review reveal"><div class="stars">★★★★★</div><p>"Turned up on time every day, kept the place tidy and the extension looks brilliant."</p><div class="who"><span class="avatar">H</span> Helen &middot; Local regular</div></div>
+      <div class="rev rv"><span class="tag">Demo</span><div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><p>"Turned up on time every day, kept the place tidy and the extension looks brilliant."</p><div class="who"><span class="avatar">H</span> Helen &middot; Local regular</div></div>
       <!-- /PLACEHOLDER -->
       <!-- PLACEHOLDER: replace with real Google reviews -->
-      <div class="review reveal"><div class="stars">★★★★★</div><p>"Quote was fair and there were no surprise costs at the end. Would use again."</p><div class="who"><span class="avatar">G</span> Gary &middot; Local regular</div></div>
+      <div class="rev rv"><span class="tag">Demo</span><div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><p>"Quote was fair and there were no surprise costs at the end. Would use again."</p><div class="who"><span class="avatar">G</span> Gary &middot; Local regular</div></div>
       <!-- /PLACEHOLDER -->
       <!-- PLACEHOLDER: replace with real Google reviews -->
-      <div class="review reveal"><div class="stars">★★★★☆</div><p>"Good communication throughout the loft conversion, finished close to schedule."</p><div class="who"><span class="avatar">W</span> Wendy &middot; Local regular</div></div>
+      <div class="rev rv"><span class="tag">Demo</span><div class="stars" role="img" aria-label="4 out of 5 stars">★★★★☆</div><p>"Good communication throughout the loft conversion, finished close to schedule."</p><div class="who"><span class="avatar">W</span> Wendy &middot; Local regular</div></div>
       <!-- /PLACEHOLDER -->
     </div>
     <!-- PLACEHOLDER: add owner-confirmed direct Google Business Profile review link here once known -->
@@ -383,13 +670,14 @@
   </div>
 </section>
 
-<section id="faq">
+<section id="faq" class="paper">
   <div class="wrap">
-    <div class="section__head reveal">
+    <div class="sec-head rv">
+      <p class="sec-idx">05 / Questions</p>
       <h2>Common Questions</h2>
       <p>What clients usually want to know before starting a job.</p>
     </div>
-    <div class="faq reveal">
+    <div class="faq rv">
       <details><summary>What should I have ready for a quote?</summary><p>Rough sizes, photos, your postcode and a preferred timescale are a useful start. Include drawings if you already have them, and mention any access restrictions.</p></details>
       <details><summary>How quickly can I get a quote?</summary><p><!-- PLACEHOLDER: confirm quote turnaround -->Usually within 48 hours of an initial site visit or call.<!-- /PLACEHOLDER --></p></details>
       <details><summary>Are you insured?</summary><p><!-- PLACEHOLDER: confirm insurance details -->Yes, we're fully insured for all work we carry out, and we're happy to show you the paperwork.<!-- /PLACEHOLDER --></p></details>
@@ -400,80 +688,99 @@
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="wrap reveal">
-    <h2>Got a project in mind?</h2>
-    <p><!-- PLACEHOLDER: confirm quote turnaround -->Get a free, no-obligation quote &mdash; usually back to you within 48 hours.<!-- /PLACEHOLDER --></p>
+<section class="cta-big">
+  <div class="cta-big__in rv">
+    <div>
+      <h2>Got a project in mind?</h2>
+      <p><!-- PLACEHOLDER: confirm quote turnaround -->Get a free, no-obligation quote &mdash; usually back to you within 48 hours.<!-- /PLACEHOLDER --></p>
+    </div>
     <!-- PLACEHOLDER: owner-confirmed phone number needed -->
-    <a href="tel:+441214960003" class="btn btn--accent">Call for a quote</a>
+    <a href="tel:+441214960003" class="btn btn--cta">Call for a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 12H19M13 6L19 12L13 18"/></svg></a>
     <!-- /PLACEHOLDER -->
   </div>
 </section>
 
 <section id="contact">
   <div class="wrap">
-    <div class="section__head">
+    <div class="sec-head rv">
+      <p class="sec-idx">06 / Contact</p>
       <h2>Get a free quote</h2>
       <p>Tell Lani Builders about your extension or renovation in Northfield.</p>
     </div>
-    <div class="quote-prep">
-      <div class="card">
+    <div class="quote">
+      <div class="panel rv">
         <h3>What to send us</h3>
         <ul class="quote-checklist">
-          <li><strong>Rough sizes:</strong> approximate room or extension dimensions.</li>
-          <li><strong>Photos:</strong> the space, the outside of the house and access.</li>
-          <li><strong>Postcode:</strong> so we know where the job is.</li>
-          <li><strong>Timescale:</strong> when you would like work to start and any deadlines.</li>
+          <li><span><strong>Rough sizes:</strong> approximate room or extension dimensions.</span></li>
+          <li><span><strong>Photos:</strong> the space, the outside of the house and access.</span></li>
+          <li><span><strong>Postcode:</strong> so we know where the job is.</span></li>
+          <li><span><strong>Timescale:</strong> when you would like work to start and any deadlines.</span></li>
         </ul>
         <p class="contact-note">Already have drawings? Keep those with your notes too.</p>
       </div>
-      <div class="card">
+      <div class="panel rv">
         <h3>Talk through your project</h3>
-        <p>Give Lani a ring, describe the job and arrange a time for a site visit.</p>
+        <p class="pl">Give Lani a ring, describe the job and arrange a time for a site visit.</p>
         <!-- PLACEHOLDER: owner-confirmed phone number needed (also add email/WhatsApp for photos) -->
-        <a href="tel:+441214960003" class="btn btn--accent">Call for a free quote</a>
+        <a href="tel:+441214960003" class="btn btn--cta">Call for a free quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 12H19M13 6L19 12L13 18"/></svg></a>
         <!-- /PLACEHOLDER -->
       </div>
     </div>
-  </div>
-  <div class="wrap map-contact reveal">
-    <div class="map-facade" id="mapFacade" data-src="https://maps.google.com/maps?q=Northfield,+Birmingham&amp;z=15&amp;output=embed" data-title="Map showing Lani Builders' coverage area">
-      <div class="map-facade__inner">
-        <strong>Lani Builders</strong>
-        <span>Northfield, Birmingham</span>
-        <button type="button" class="btn btn--accent" id="mapShowBtn">Show map</button>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Lani+Builders+Northfield+Birmingham" target="_blank" rel="noopener">Get directions &rarr;</a>
+    <div class="contact-grid rv">
+      <div class="map-facade" id="mapFacade" data-src="https://maps.google.com/maps?q=Northfield,+Birmingham&amp;z=15&amp;output=embed" data-title="Map showing Lani Builders' coverage area">
+        <div class="map-facade__inner">
+          <strong>Lani Builders</strong>
+          <span>Northfield, Birmingham</span>
+          <button type="button" class="btn btn--line" id="mapShowBtn">Show map</button>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Lani+Builders+Northfield+Birmingham" target="_blank" rel="noopener">Get directions &rarr;</a>
+        </div>
       </div>
-    </div>
-    <div class="grid u-s3">
-      <!-- PLACEHOLDER: real opening hours needed -->
-      <div class="card u-s4"><h3>🕒 Available</h3><p>Mon–Fri: 8am – 6pm<br>Sat: 9am – 1pm</p></div>
-      <!-- /PLACEHOLDER -->
-      <!-- PLACEHOLDER: confirm service area; street address and postcode needed -->
-      <div class="card u-s4"><h3>📍 Covering</h3><p>Northfield, Longbridge, Bournville, Kings Norton and nearby</p>
-        <p class="contact-note"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Northfield%2C+Birmingham" target="_blank" rel="noopener">Directions to Northfield &rarr;</a></p>
+      <div class="info">
+        <!-- PLACEHOLDER: real opening hours needed -->
+        <div class="panel"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7V12L15.5 14"/></svg>Available</h3><p class="pl">Mon–Fri: 8am – 6pm<br>Sat: 9am – 1pm</p></div>
+        <!-- /PLACEHOLDER -->
+        <!-- PLACEHOLDER: confirm service area; street address and postcode needed -->
+        <div class="panel"><h3><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21C12 21 5 14.5 5 9.5A7 7 0 0 1 19 9.5C19 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Covering</h3><p class="pl">Northfield, Longbridge, Bournville, Kings Norton and nearby</p>
+          <p class="contact-note"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Northfield%2C+Birmingham" target="_blank" rel="noopener">Directions to Northfield &rarr;</a></p>
+        </div>
+        <!-- /PLACEHOLDER -->
       </div>
-      <!-- /PLACEHOLDER -->
     </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <p>&copy; 2026 Lani Builders, Northfield, Birmingham. · <a href="privacy.html">Privacy notice</a></p>
+  <div class="tb">
+    <div class="big"><strong>Lani<br>Builders</strong><span class="k">Builders in Northfield, Birmingham</span></div>
+    <div><p class="k">Project</p><p class="v">Your home, planned properly</p></div>
+    <div><p class="k">Status</p><p class="v">Free quotes open</p></div>
+    <div><p class="k">Scale</p><p class="v">1:1, built to last</p></div>
+    <!-- PLACEHOLDER: real opening hours needed -->
+    <div><p class="k">Hours</p><p class="v">Mon–Fri 8am – 6pm<br>Sat 9am – 1pm</p></div>
+    <!-- /PLACEHOLDER -->
+    <!-- PLACEHOLDER: owner-confirmed phone number needed -->
+    <div><p class="k">Phone</p><p class="v"><a href="tel:+441214960003">Call for a free quote</a></p></div>
+    <!-- /PLACEHOLDER -->
+    <!-- PLACEHOLDER: street address and postcode needed -->
+    <div><p class="k">Address</p><p class="v">Northfield, Birmingham<br><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Northfield%2C+Birmingham" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+    <!-- /PLACEHOLDER -->
+    <div class="wide"><p class="k">Legal</p><p class="v">&copy; 2026 Lani Builders, Northfield, Birmingham. &middot; <a href="privacy.html">Privacy notice</a></p></div>
+  </div>
 </footer>
 
 <div class="sticky-cta">
+  <a href="#contact" class="btn btn--cta">Get a free quote</a>
   <!-- PLACEHOLDER: owner-confirmed phone number needed -->
-  <a href="tel:+441214960003" class="btn btn--accent">Call for a quote</a>
+  <a href="tel:+441214960003" class="btn btn--line">Call</a>
   <!-- /PLACEHOLDER -->
-  <a href="#contact" class="btn btn--outline">Get in Touch</a>
 </div>
 
 <script>
   document.documentElement.classList.add('js');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const desktopMQ = window.matchMedia('(min-width: 821px)');
+  const tallMQ = window.matchMedia('(max-height: 1100px)');
 
   const burger = document.getElementById('burgerBtn');
   const menu = document.getElementById('mobileMenu');
@@ -496,7 +803,6 @@
   syncHeaderHeight();
   window.addEventListener('resize', syncHeaderHeight);
   window.addEventListener('load', syncHeaderHeight);
-  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 10));
 
   function smoothScrollTo(id){
     const target = document.getElementById(id);
@@ -512,33 +818,116 @@
     link.addEventListener('click', (e) => {
       e.preventDefault();
       setMenu(false);
+      if(id === 'top'){ window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' }); history.replaceState(null, '', '#top'); return; }
       smoothScrollTo(id);
       history.replaceState(null, '', '#' + id);
     });
   });
 
-  const revealEls = document.querySelectorAll('.reveal');
+  /* reveals (progressive: hidden only after .js is set) */
+  const revealEls = document.querySelectorAll('.rv, .rv-l, .rv-r');
   if('IntersectionObserver' in window){
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12 });
     revealEls.forEach(el => io.observe(el));
+    document.querySelectorAll('.sh').forEach(el => io.observe(el));
   } else {
     revealEls.forEach(el => el.classList.add('in'));
   }
+
+  /* hero: scroll-driven photo -> floor plan */
+  (function(){
+    const hero = document.getElementById('top');
+    const sheet = document.getElementById('heroSheet');
+    const rdPhoto = document.getElementById('rdPhoto');
+    const rdPlan = document.getElementById('rdPlan');
+    const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+    const pinned = () => desktopMQ.matches && tallMQ.matches && !reduceMotion.matches;
+    let target = 0, shown = 0, intro = 0, raf = 0;
+    function setP(p){
+      sheet.style.setProperty('--p', p.toFixed(4));
+      rdPhoto.classList.toggle('on', p < 0.5);
+      rdPlan.classList.toggle('on', p >= 0.5);
+    }
+    function measure(){
+      if(!pinned()){ sheet.style.removeProperty('--p'); rdPhoto.classList.remove('on'); rdPlan.classList.add('on'); return; }
+      const stage = hero.firstElementChild;
+      const run = hero.offsetHeight - stage.offsetHeight;
+      const r = hero.getBoundingClientRect();
+      target = clamp((header.offsetHeight - r.top) / Math.max(run, 1), 0, 1);
+      if(!raf) raf = requestAnimationFrame(tick);
+    }
+    function tick(){
+      raf = 0;
+      const goal = Math.max(target, intro);
+      shown += (goal - shown) * 0.16;
+      if(Math.abs(goal - shown) < 0.0008) shown = goal;
+      setP(shown);
+      if(shown !== goal) raf = requestAnimationFrame(tick);
+    }
+    window.addEventListener('scroll', measure, { passive: true });
+    window.addEventListener('resize', measure);
+    desktopMQ.addEventListener('change', measure);
+    tallMQ.addEventListener('change', measure);
+    reduceMotion.addEventListener('change', measure);
+    if(pinned()){
+      setP(0);
+      const t0 = performance.now();
+      (function introStep(now){
+        const k = clamp((now - t0 - 350) / 1500, 0, 1);
+        intro = 0.16 * (1 - Math.pow(1 - k, 3));
+        measure();
+        if(k < 1) requestAnimationFrame(introStep);
+      })(t0);
+    } else { measure(); }
+
+    /* crosshair readout, mouse only */
+    if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+      const read = document.getElementById('xhRead');
+      sheet.addEventListener('pointermove', (e) => {
+        const b = sheet.getBoundingClientRect();
+        const x = clamp(e.clientX - b.left, 0, b.width), y = clamp(e.clientY - b.top, 0, b.height);
+        sheet.style.setProperty('--mx', x.toFixed(1) + 'px');
+        sheet.style.setProperty('--my', y.toFixed(1) + 'px');
+        const mmx = Math.round(x / b.width * 6400 / 10) * 10, mmy = Math.round(y / b.height * 4000 / 10) * 10;
+        read.textContent = 'X ' + String(mmx).padStart(4, '0') + ' / Y ' + String(mmy).padStart(4, '0');
+        sheet.classList.add('is-aim');
+      });
+      sheet.addEventListener('pointerleave', () => sheet.classList.remove('is-aim'));
+    }
+  })();
+
+  /* process timeline draws as you scroll */
+  (function(){
+    const tl = document.getElementById('timeline');
+    if(!tl) return;
+    function upd(){
+      if(reduceMotion.matches){ tl.style.setProperty('--tp', '1'); return; }
+      const r = tl.getBoundingClientRect();
+      const p = Math.min(1, Math.max(0, (window.innerHeight * 0.65 - r.top) / r.height));
+      tl.style.setProperty('--tp', p.toFixed(3));
+    }
+    upd();
+    window.addEventListener('scroll', upd, { passive: true });
+    window.addEventListener('resize', upd);
+  })();
+
+  /* drawn vs built slider */
+  (function(){
+    const cmp = document.getElementById('cmp'), rng = document.getElementById('cmpRange');
+    if(!cmp || !rng) return;
+    function set(){
+      cmp.style.setProperty('--pos', rng.value + '%');
+      rng.setAttribute('aria-valuetext', rng.value + '% drawn plan, ' + (100 - rng.value) + '% finished room');
+    }
+    rng.addEventListener('input', set); set();
+  })();
+
+  /* header shadow */
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
 </script>
 
-<style>
-  .map-facade{position:relative; width:100%; height:100%; min-height:260px; border-radius:16px; overflow:hidden; background:linear-gradient(135deg,#182430,#0f1720); border:1px solid var(--line);}
-  .map-facade__inner{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; text-align:center; padding:20px;}
-  .map-facade__inner strong{font-size:20px;}
-  .map-facade__inner span{color:var(--muted); font-size:14px;}
-  .map-facade__inner a{color:var(--accent); font-weight:700; font-size:14px;}
-  .map-facade__inner .btn:focus-visible,.map-facade__inner a:focus-visible{outline:3px solid var(--accent2); outline-offset:3px;}
-  .map-facade iframe{position:absolute; inset:0; width:100%; height:100%; border:0; filter:invert(90%) hue-rotate(180deg);}
-  .map-facade.is-loaded .map-facade__inner{inset:auto; bottom:10px; left:10px; right:auto; padding:6px 12px; background:rgba(15,23,32,.85); border-radius:10px; flex-direction:row; z-index:2;}
-  .map-facade.is-loaded .map-facade__inner strong,.map-facade.is-loaded .map-facade__inner span,.map-facade.is-loaded .map-facade__inner button{display:none;}
-</style>
 <script>
   (function(){
     var f=document.getElementById('mapFacade'), b=document.getElementById('mapShowBtn');
